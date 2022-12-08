@@ -9,13 +9,14 @@
   --medium-gray: rgb(96, 96, 96);
   --dark-gray: rgb(13, 13, 13);
   --header-height: 60px;
+  --header-background: rgb(232, 232, 232);
   --brand-name: rgb(29, 66, 95);
   --brand-icon: 60px;
   --sidebar-background: rgb(58, 79, 148);
   --sidebar-dropdown-background: rgb(36, 73, 116);
   --sidebar-width-open: 200px;
   --sidebar-icon: 25px;
-  --settings-background: rgb(22, 22, 22);
+  --settings-background: rgb(32, 74, 138);
   --animation-duration: 0.3s;
   --animation-timing-curve: ease-in-out;
 }
@@ -32,6 +33,7 @@
 body.dark-mode {
   --text-color: rgb(255, 255, 255);
   --wrapper-background: #1e1e1e;
+  --header-background: rgb(255, 255, 255);
   --sidebar-background: #2e2e2e;
   --sidebar-dropdown-background: #1e1e1e;
   --settings-background: #332323;
@@ -49,7 +51,7 @@ body.dark-mode {
   gap: 1rem;
   position: sticky;
   top: 0;
-  background-color: var(--light-gray);
+  background-color: var(--header-background);
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
   padding: 0 0.5rem;
   height: var(--header-height);
