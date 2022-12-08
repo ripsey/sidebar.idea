@@ -49,7 +49,19 @@ window.addEventListener("resize", () => {
   }
 });
 
-let toggleDarkMode = () => document.body.classList.toggle("dark-mode");
+let toggleDarkMode = () => {
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem(
+    "dark_mode",
+    document.body.classList.contains("dark-mode")
+  );
+};
 document
   .querySelector("#dark-mode-switch")
   .addEventListener("change", toggleDarkMode);
+
+let dark_mode = localStorage.getItem("dark_mode");
+if (dark_mode === "true") {
+  toggleDarkMode();
+  document.querySelector("#dark-mode-switch").checked = true;
+}
