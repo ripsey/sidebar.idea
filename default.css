@@ -32,7 +32,7 @@
 body.dark-mode {
   --text-color: rgb(255, 255, 255);
   --wrapper-background: #1e1e1e;
-  --sidebar-background: #1e1e1e;
+  --sidebar-background: #2e2e2e;
   --sidebar-dropdown-background: #1e1e1e;
   --settings-background: #332323;
   --lightest-gray: #fff;
@@ -331,6 +331,10 @@ body.dark-mode {
   user-select: none;
   appearance: none;
   padding-inline: 0.8rem;
+}
+
+.menu-icon-btn span:nth-child(1) {
+  margin-top: 5px;
 }
 
 .menu-icon-btn span {
