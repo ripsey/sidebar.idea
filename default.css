@@ -29,6 +29,19 @@
   /* color: var(--text-color); */
 }
 
+body.dark-mode {
+  --text-color: rgb(255, 255, 255);
+  --wrapper-background: #1e1e1e;
+  --sidebar-background: #1e1e1e;
+  --sidebar-dropdown-background: #1e1e1e;
+  --settings-background: #686565;
+  --lightest-gray: #fff;
+  --dark-gray: #000;
+  --accent-color: rgb(225, 255, 0);
+  --accent-color-secondary: rgb(225, 0, 116);
+  color: #fff;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -372,17 +385,4 @@
 
 .settingsbar.is-active {
   right: 0%;
-}
-
-body.dark-mode {
-  --text-color: rgb(255, 255, 255);
-  --wrapper-background: #1e1e1e;
-  --sidebar-background: #1e1e1e;
-  --sidebar-dropdown-background: #1e1e1e;
-  --settings-background: #686565;
-  --lightest-gray: #fff;
-  --dark-gray: #000;
-  --accent-color: rgb(225, 255, 0);
-  --accent-color-secondary: rgb(225, 0, 116);
-  color: #fff;
 }
