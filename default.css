@@ -13,6 +13,7 @@
   --sidebar-dropdown-background: rgb(36, 73, 116);
   --sidebar-width-open: 200px;
   --sidebar-icon: 25px;
+  --settings-background: rgb(231, 240, 255);
   --animation-duration: 0.3s;
   --animation-timing-curve: ease-in-out;
 }
@@ -348,4 +349,22 @@
 
 .menu-icon-btn.is-active:hover span {
   background-color: var(--accent-color-secondary);
+}
+
+.settingsbar {
+  flex: 1 1 0;
+  background-color: var(--settings-background);
+  z-index: 80;
+  position: fixed;
+  top: 1;
+  padding: 1rem;
+  right: -200px;
+  height: 100vh;
+  width: 200px;
+  max-width: 100%;
+  transition: 0.3s linear;
+}
+
+.settingsbar.is-active {
+  right: 0%;
 }

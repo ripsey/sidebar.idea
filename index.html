@@ -28,28 +28,30 @@
         <span></span>
       </button>
       <div class="brand-name-top">Ripsey</div>
-      <div>
-        <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-sm btn-primary dropdown-toggle"
-            data-toggle="dropdown"
+      <div class="d-flex gap-2">
+        <div class="dropdown">
+          <a
+            class="btn btn-sm btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Something else
-          </button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
+            Dropdown link
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </div>
-        <button type="button" class="btn btn-sm btn-dark">Settings</button>
+        <button type="button" class="btn btn-sm btn-dark" data-settingsbar>
+          Settings
+        </button>
       </div>
     </header>
-    <div class="wrapper">
+    <section class="wrapper">
       <aside class="sidebar" data-sidebar>
         <div class="top-sidebar">
           <a href="https://kisp.be" target="_blank" class="brand-logo"
@@ -262,6 +264,12 @@
           <li>Not a bug but dropdown items have a fixed height :(</li>
         </ul>
       </main>
-    </div>
+      <aside class="settingsbar">
+        <h3>Settings</h3>
+        <nav class="settingsbarmenu">
+          <a href="#" class="btn btn-primary w-100">Set me</a>
+        </nav>
+      </aside>
+    </section>
   </body>
 </html>

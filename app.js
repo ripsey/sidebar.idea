@@ -1,6 +1,7 @@
 // const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const mobilemenu = document.querySelector(".menu-icon-btn");
+const settingsbar = document.querySelector("[data-settingsbar]");
 
 let toggleSidebar = () => {
   sidebar.classList.toggle("open");
@@ -32,6 +33,11 @@ dropdowns.forEach((e) => {
 mobilemenu.addEventListener("click", function () {
   this.classList.toggle("is-active");
   toggleSidebar();
+});
+
+settingsbar.addEventListener("click", function () {
+  document.querySelector(".settingsbar").classList.toggle("is-active");
+  console.log("clicked");
 });
 
 window.addEventListener("resize", () => {
