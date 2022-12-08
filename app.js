@@ -48,3 +48,8 @@ window.addEventListener("resize", () => {
     }
   }
 });
+
+let toggleDarkMode = () => document.body.classList.toggle("dark-mode");
+document
+  .querySelector("#dark-mode-switch")
+  .addEventListener("change", toggleDarkMode);
