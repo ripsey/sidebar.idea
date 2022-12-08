@@ -50,8 +50,8 @@ body.theme-belgium {
   --wrapper-background: #ffffff;
   --header-background: rgb(204, 201, 22);
   --sidebar-background: #2e2e29;
-  --sidebar-dropdown-background: #8f2929;
-  --settings-background: #b41a1a;
+  --sidebar-dropdown-background: #9c4b4b;
+  --settings-background: #5c1c1c;
   --lightest-gray: #fff;
   --dark-gray: #000;
   --accent-color: #b41a1a;
@@ -411,9 +411,9 @@ body.theme-christmas {
   position: fixed;
   top: 1;
   padding: 1rem;
-  right: -250px;
+  right: -200px;
   height: 100vh;
-  width: 250px;
+  width: 200px;
   max-width: 100%;
   transition: 0.3s linear;
   color: var(--lightest-gray);
