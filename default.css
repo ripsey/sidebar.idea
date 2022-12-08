@@ -188,7 +188,7 @@
   display: flex;
   padding: 0.5rem;
   color: #fff;
-  /* text-decoration: none; */
+  text-decoration: none;
   gap: 1rem;
   justify-content: center;
 }
@@ -316,7 +316,7 @@
 }
 
 .menu-icon-btn span {
-  background-color: var(--dark);
+  background-color: var(--dark-gray);
   display: block;
   width: 33px;
   height: 4px;
