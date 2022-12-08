@@ -11,10 +11,15 @@
   --header-height: 60px;
   --header-background: rgb(232, 232, 232);
   --brand-name: rgb(29, 66, 95);
+  --brand-name-hover: linear-gradient(
+    331deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
   --brand-icon: 60px;
   --sidebar-background: rgb(58, 79, 148);
   --sidebar-dropdown-background: rgb(36, 73, 116);
-  --sidebar-width-open: 200px;
+  --sidebar-width-open: 240px;
   --sidebar-icon: 25px;
   --settings-background: rgb(32, 74, 138);
   --animation-duration: 0.3s;
@@ -27,7 +32,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* color: var(--text-color); */
 }
 
 body.theme-dark {
@@ -37,8 +41,6 @@ body.theme-dark {
   --sidebar-background: #2e2e2e;
   --sidebar-dropdown-background: #1e1e1e;
   --settings-background: #332323;
-  --lightest-gray: #fff;
-  --dark-gray: #000;
   --accent-color: rgb(225, 255, 0);
   --accent-color-secondary: rgb(225, 0, 116);
   color: #fff;
@@ -47,31 +49,23 @@ body.theme-dark {
 body.theme-belgium {
   --text-color: rgb(255, 255, 255);
   --brand-name: rgb(37, 37, 37);
-  --wrapper-background: #ffffff;
   --header-background: rgb(204, 201, 22);
   --sidebar-background: #2e2e29;
   --sidebar-dropdown-background: #9c4b4b;
   --settings-background: #5c1c1c;
-  --lightest-gray: #fff;
-  --dark-gray: #000;
   --accent-color: #b41a1a;
   --accent-color-secondary: rgb(225, 0, 116);
-  /* color: #fff; */
 }
 
 body.theme-christmas {
   --text-color: rgb(255, 255, 255);
   --brand-name: rgb(226, 233, 238);
-  --wrapper-background: #ffffff;
   --header-background: rgb(46, 95, 41);
   --sidebar-background: #832323;
   --sidebar-dropdown-background: #8f2929;
   --settings-background: #332323;
-  --lightest-gray: #fff;
-  --dark-gray: #000;
   --accent-color: rgb(0, 174, 255);
   --accent-color-secondary: rgb(225, 0, 116);
-  /* color: #fff; */
 }
 
 .header {
@@ -85,7 +79,7 @@ body.theme-christmas {
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
   padding: 0 0.5rem;
   height: var(--header-height);
-  z-index: 99;
+  z-index: 100;
 }
 
 .brand-name-top {
@@ -95,11 +89,7 @@ body.theme-christmas {
 }
 
 .brand-name-top:hover {
-  background: linear-gradient(
-    331deg,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(252, 70, 107, 1) 100%
-  );
+  background: var(--brand-name-hover);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -161,7 +151,6 @@ body.theme-christmas {
 
 .sidebar.open .hidden-sidebar {
   display: block;
-  /* width: 100%; */
   height: auto;
   opacity: 1;
 }
@@ -212,6 +201,24 @@ body.theme-christmas {
 
 .sidebar.open .sidebar-dropdown-link {
   justify-content: space-between;
+}
+
+.settingsbar {
+  background-color: var(--settings-background);
+  z-index: 80;
+  position: fixed;
+  top: 1;
+  padding: 1rem;
+  right: -200px;
+  height: 100vh;
+  width: 200px;
+  max-width: 100%;
+  transition: 0.3s linear;
+  color: var(--lightest-gray);
+}
+
+.settingsbar.is-active {
+  right: 0%;
 }
 
 .icon-text-arrow {
@@ -269,29 +276,8 @@ body.theme-christmas {
   color: var(--accent-color-secondary);
 }
 
-/* .sidebar-list-header.active a {
-  background-color: var(--lightest-gray);
-  color: #000;
-} */
-
-/* .sidebar-list-item.active::before {
-  content: "";
-  background-color: var(--accent-color);
-  height: 100%;
-  left: 0;
-  width: 3px;
-  position: absolute;
-} */
-
-.sidebar .top-sidebar .hidden-sidebar {
-  /* text-align: center; */
-  /* width: 100%; */
-}
-
 .sidebar-dropdown-item {
   width: 100%;
-  /* display: none; */
-  /* transition: all 0.4s ease; */
   height: 0px;
   opacity: 0;
   color: #fff;
@@ -313,9 +299,6 @@ body.theme-christmas {
 .dropdown-show {
   height: 41px;
   opacity: 1;
-  /* z-index: 99; */
-  /* display: block; */
-  /* transition: all 0.4s ease; */
 }
 
 .sidebar-dropdown-header {
@@ -402,23 +385,4 @@ body.theme-christmas {
 
 .menu-icon-btn.is-active:hover span {
   background-color: var(--accent-color-secondary);
-}
-
-.settingsbar {
-  /* flex: 1 1 0; */
-  background-color: var(--settings-background);
-  z-index: 80;
-  position: fixed;
-  top: 1;
-  padding: 1rem;
-  right: -200px;
-  height: 100vh;
-  width: 200px;
-  max-width: 100%;
-  transition: 0.3s linear;
-  color: var(--lightest-gray);
-}
-
-.settingsbar.is-active {
-  right: 0%;
 }
