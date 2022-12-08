@@ -62,9 +62,9 @@ window.addEventListener("resize", () => {
 //   .addEventListener("change", toggleDarkMode);
 
 let radios = document.querySelectorAll(".form-check-theme-switch");
+document.querySelector("#theme-switch-default").checked = true;
 radios.forEach((e) => {
   e.addEventListener("click", () => {
-    console.log("clicked switch");
     toggleTheme(e.value);
   });
 });
@@ -81,6 +81,7 @@ let theme = localStorage.getItem("brandname_theme");
 radios.forEach((e) => {
   if (e.value === theme) {
     e.checked = true;
+    toggleTheme(e.value);
   }
 });
 // if (theme != null) {

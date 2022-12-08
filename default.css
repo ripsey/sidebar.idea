@@ -44,6 +44,36 @@ body.theme-dark {
   color: #fff;
 }
 
+body.theme-belgium {
+  --text-color: rgb(255, 255, 255);
+  --brand-name: rgb(37, 37, 37);
+  --wrapper-background: #ffffff;
+  --header-background: rgb(204, 201, 22);
+  --sidebar-background: #2e2e29;
+  --sidebar-dropdown-background: #8f2929;
+  --settings-background: #b41a1a;
+  --lightest-gray: #fff;
+  --dark-gray: #000;
+  --accent-color: #b41a1a;
+  --accent-color-secondary: rgb(225, 0, 116);
+  /* color: #fff; */
+}
+
+body.theme-christmas {
+  --text-color: rgb(255, 255, 255);
+  --brand-name: rgb(226, 233, 238);
+  --wrapper-background: #ffffff;
+  --header-background: rgb(46, 95, 41);
+  --sidebar-background: #832323;
+  --sidebar-dropdown-background: #8f2929;
+  --settings-background: #332323;
+  --lightest-gray: #fff;
+  --dark-gray: #000;
+  --accent-color: rgb(0, 174, 255);
+  --accent-color-secondary: rgb(225, 0, 116);
+  /* color: #fff; */
+}
+
 .header {
   display: flex;
   align-items: center;
