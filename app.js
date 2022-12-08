@@ -49,19 +49,44 @@ window.addEventListener("resize", () => {
   }
 });
 
-let toggleDarkMode = () => {
-  document.body.classList.toggle("dark-mode");
-  localStorage.setItem(
-    "dark_mode",
-    document.body.classList.contains("dark-mode")
-  );
-};
-document
-  .querySelector("#dark-mode-switch")
-  .addEventListener("change", toggleDarkMode);
+// let toggleDarkMode = () => {
+//   document.body.classList.toggle("dark-mode");
+//   localStorage.setItem(
+//     "dark_mode",
+//     document.body.classList.contains("dark-mode")
+//   );
+// };
 
-let dark_mode = localStorage.getItem("dark_mode");
-if (dark_mode === "true") {
-  toggleDarkMode();
-  document.querySelector("#dark-mode-switch").checked = true;
-}
+// document
+//   .querySelector("#dark-mode-switch")
+//   .addEventListener("change", toggleDarkMode);
+
+let radios = document.querySelectorAll(".form-check-theme-switch");
+radios.forEach((e) => {
+  e.addEventListener("click", () => {
+    console.log("clicked switch");
+    toggleTheme(e.value);
+  });
+});
+
+let toggleTheme = (theme) => {
+  document.body.className = "";
+  document.body.classList.toggle("theme-" + theme);
+  // let theme = document.querySelector("#dark-mode-switch").checked;
+  console.log(theme);
+  localStorage.setItem("brandname_theme", theme);
+};
+
+let theme = localStorage.getItem("brandname_theme");
+radios.forEach((e) => {
+  if (e.value === theme) {
+    e.checked = true;
+  }
+});
+// if (theme != null) {
+//   document.body.classList.toggle("theme-" + theme);
+// } else if (theme === "default") {
+//   input.className = "";
+// } else {
+//   input.className = '';
+// }

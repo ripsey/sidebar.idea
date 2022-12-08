@@ -30,7 +30,7 @@
   /* color: var(--text-color); */
 }
 
-body.dark-mode {
+body.theme-dark {
   --text-color: rgb(255, 255, 255);
   --wrapper-background: #1e1e1e;
   --header-background: rgb(255, 255, 255);
