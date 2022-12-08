@@ -15,7 +15,7 @@
   --sidebar-dropdown-background: rgb(36, 73, 116);
   --sidebar-width-open: 200px;
   --sidebar-icon: 25px;
-  --settings-background: rgb(75, 76, 77);
+  --settings-background: rgb(22, 22, 22);
   --animation-duration: 0.3s;
   --animation-timing-curve: ease-in-out;
 }
@@ -34,7 +34,7 @@ body.dark-mode {
   --wrapper-background: #1e1e1e;
   --sidebar-background: #1e1e1e;
   --sidebar-dropdown-background: #1e1e1e;
-  --settings-background: #686565;
+  --settings-background: #332323;
   --lightest-gray: #fff;
   --dark-gray: #000;
   --accent-color: rgb(225, 255, 0);
