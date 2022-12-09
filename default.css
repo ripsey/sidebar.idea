@@ -192,9 +192,10 @@ body.theme-christmas {
   padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   list-style: none;
   white-space: nowrap;
+  /* flex-grow: 1; */
 }
 
 .sidebar.open .sidebar-link {
@@ -260,6 +261,8 @@ body.theme-christmas {
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-between;
+  /* flex-grow: 1; */
 }
 
 .sidebar-list-item.active a.sidebar-link {
@@ -267,7 +270,7 @@ body.theme-christmas {
   color: #000;
 }
 
-.sidebar-list-item:hover {
+.sidebar-list-item a:hover {
   background-color: var(--lightest-gray);
 }
 
@@ -308,23 +311,32 @@ body.theme-christmas {
 .sidebar-dropdown-header {
   width: 100%;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   /* align-items: center; */
   color: #fff;
 }
 
-.sidebar-dropdown-header:hover {
+/* Bug here */
+
+.sidebar .sidebar-dropdown-header a:hover {
   background-color: var(--lightest-gray);
   color: #000;
 }
 
+.sidebar:not(.open) .sidebar-dropdown-header a:hover {
+  background-color: var(--lightest-gray);
+  color: rgb(255, 255, 255);
+}
+
 .sidebar-dropdown-header a:hover {
   text-decoration: none;
-  color: #000;
+  color: rgb(138, 32, 32);
 }
 
 .sidebar-dropdown-header a {
   color: inherit;
+  flex-grow: 1;
 }
 
 .sidebar-dropdown-header a:hover svg {
@@ -410,13 +422,18 @@ body.theme-christmas {
   color: var(--lightest-gray);
   text-decoration: none;
 }
+
 .sidebar:not(.open) .sidebar-list li:hover .sub-menu {
-  /* top: -20; */
   opacity: 1;
-  /* position: relative; */
   pointer-events: auto;
-  transition: all 0.4s ease;
-  /* z-index: 1001; */
+  /* display: block; */
+  /* transition: all 0.4s ease; */
+}
+.sidebar:not(.open) .sidebar-list li .sub-menu {
+  /* opacity: 1; */
+  pointer-events: none;
+  /* display: block; */
+  /* transition: all 0.4s ease; */
 }
 
 .siderbar,
