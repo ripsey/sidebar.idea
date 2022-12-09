@@ -21,6 +21,7 @@
   --sidebar-dropdown-background: rgb(36, 73, 116);
   --sidebar-width-open: 240px;
   --sidebar-icon: 25px;
+  --sidebar-width: 60px;
   --settings-background: rgb(32, 74, 138);
   --animation-duration: 0.3s;
   --animation-timing-curve: ease-in-out;
@@ -113,7 +114,7 @@ body.theme-christmas {
 .sidebar {
   flex-shrink: 0;
   overflow: hidden;
-  width: 60px;
+  width: var(--sidebar-width);
   border-right: 1px solid var(--light-gray);
   display: flex;
   flex-direction: column;
@@ -256,6 +257,8 @@ body.theme-christmas {
 }
 
 .sidebar-list-item {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -391,40 +394,35 @@ body.theme-christmas {
 .sidebar .sidebar-list li .sub-menu {
   position: absolute;
   /* position: relative; */
-  top: 0;
-  /* left: 100%; */
+  /* top: 0; */
+  left: 100%;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: auto;
   transition: all 0.4s ease;
-  z-index: 1000;
+  /* z-index: 1000; */
   background-color: var(--dark-gray);
   padding: 1rem;
+  list-style-type: none;
 }
 
 .sidebar .sidebar-list li .sub-menu li a {
+  /* position: relative; */
   color: var(--lightest-gray);
   text-decoration: none;
 }
-/* .sidebar:not(.open) .sidebar-list li .sub-menu {
-  top: 0;
-  left: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0s;
-} */
 .sidebar:not(.open) .sidebar-list li:hover .sub-menu {
-  top: 0;
+  /* top: -20; */
   opacity: 1;
-  /* position: absolute; */
+  /* position: relative; */
   pointer-events: auto;
   transition: all 0.4s ease;
-  z-index: 1001;
+  /* z-index: 1001; */
 }
 
 .siderbar,
 .sidebar-list,
 .wrapper {
-  /* position: relative; */
+  /* position: absolute; */
 }
 
 .sidebar {
