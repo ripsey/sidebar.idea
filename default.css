@@ -309,7 +309,7 @@ body.theme-christmas {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   color: #fff;
 }
 
@@ -427,4 +427,8 @@ body.theme-christmas {
 
 .sidebar {
   overflow: visible;
+}
+
+.sub-menu li:nth-child(1) {
+  font-weight: bold;
 }
