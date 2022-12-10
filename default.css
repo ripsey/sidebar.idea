@@ -212,12 +212,10 @@ body.theme-christmas {
 .settingsbar {
   background-color: var(--settings-background);
   position: fixed;
-  /* top: 0; */
   padding: 1rem;
   right: -14rem;
   height: 100vh;
   width: var(--settings-width);
-  /* max-width: 100%; */
   transition: 0.3s linear;
   color: var(--lightest-gray);
 }
@@ -417,4 +415,8 @@ body.theme-christmas {
 
 .sidebar .sidebar-list li .sub-menu li:nth-child(1) {
   font-weight: bold;
+}
+
+.sidebar.open .sidebar-list li .sub-menu {
+  display: none;
 }

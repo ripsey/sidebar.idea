@@ -1,31 +1,30 @@
-// const menuIconButton = document.querySelector("[data-menu-icon-btn]");
 const sidebar = document.querySelector("[data-sidebar]");
 const mobilemenu = document.querySelector(".menu-icon-btn");
 const settingsbar = document.querySelector("[data-settingsbar]");
 
 mobilemenu.addEventListener("click", () => {
-  mobilemenu.classList.toggle("is-active");
   toggleSidebar();
 });
 
 settingsbar.addEventListener("click", () => {
   document.querySelector(".settingsbar").classList.toggle("is-active");
-  console.log("clicked");
 });
 toggleSidebar = () => {
   sidebar.classList.toggle("open");
+  mobilemenu.classList.toggle("is-active");
 };
 openSidebar = () => {
   sidebar.classList.add("open");
+  mobilemenu.classList.add("is-active");
 };
 closeSidebar = () => {
   sidebar.classList.remove("open");
+  mobilemenu.classList.remove("is-active");
 };
 
 toggleArrow = (e) => {
-  let expanded = e.getAttribute("aria-expanded");
   let arrowParent = e.closest("div");
-  if (expanded === "true") {
+  if (e.getAttribute("aria-expanded") === "true") {
     e.setAttribute("aria-expanded", "false");
     arrowParent.style.transform = "rotate(0deg)";
   } else {
@@ -38,10 +37,10 @@ let dropdowns = document.querySelectorAll(".sidebar-dropdown-icon");
 dropdowns.forEach((e) => {
   e.addEventListener("click", () => {
     toggleArrow(e);
-    let dropdown = document.querySelectorAll(
+    let dropdowns = document.querySelectorAll(
       "[data-dropdown=" + e.getAttribute("data-dropdown-header") + "]"
     );
-    dropdown.forEach((e) => e.classList.toggle("dropdown-show"));
+    dropdowns.forEach((e) => e.classList.toggle("dropdown-show"));
   });
 });
 
@@ -66,7 +65,6 @@ toggleTheme = (theme) => {
 let radios = document.querySelectorAll(".form-check-theme-switch");
 document.querySelector("#theme-switch-default").checked = true;
 radios.forEach((e) => e.addEventListener("change", () => toggleTheme(e.value)));
-
 radios.forEach((e) => {
   if (e.value === localStorage.getItem("brandname_theme")) {
     e.checked = true;
