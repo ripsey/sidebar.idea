@@ -254,6 +254,7 @@ body.theme-christmas {
 
 .sidebar-dropdown-icon {
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .sidebar-list-item {
@@ -389,6 +390,7 @@ body.theme-christmas {
   background-color: var(--dark-gray);
   padding: 1rem;
   list-style-type: none;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .sidebar:not(.open) .sidebar-list li .sub-menu {
