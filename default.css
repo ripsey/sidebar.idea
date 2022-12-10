@@ -18,6 +18,7 @@
   );
   --brand-icon: 5rem;
   --sidebar-background: rgb(58, 79, 148);
+  --sidebar-background-gradient: rgb(64, 114, 180);
   --sidebar-dropdown-background: rgb(172, 171, 171);
   --sidebar-width-open: 15rem;
   --sidebar-icon: 1.8rem;
@@ -42,6 +43,7 @@ body.theme-dark {
   --wrapper-background: #1e1e1e;
   --header-background: rgb(255, 255, 255);
   --sidebar-background: #2e2e2e;
+  --sidebar-background-gradient: rgb(100, 100, 100);
   --sidebar-dropdown-background: #1e1e1e;
   --settings-background: #332323;
   --accent-color: rgb(225, 255, 0);
@@ -51,9 +53,10 @@ body.theme-dark {
 
 body.theme-belgium {
   --text-color: rgb(255, 255, 255);
-  --brand-name: rgb(37, 37, 37);
+  --brand-name: rgb(255, 255, 255);
   --header-background: rgb(204, 201, 22);
   --sidebar-background: #2e2e29;
+  --sidebar-background-gradient: rgb(131, 131, 131);
   --sidebar-dropdown-background: #9c4b4b;
   --settings-background: #5c1c1c;
   --accent-color: #b41a1a;
@@ -65,6 +68,7 @@ body.theme-christmas {
   --brand-name: rgb(226, 233, 238);
   --header-background: rgb(46, 95, 41);
   --sidebar-background: #832323;
+  --sidebar-background-gradient: rgb(107, 26, 26);
   --sidebar-dropdown-background: #8f2929;
   --settings-background: #332323;
   --accent-color: rgb(0, 174, 255);
@@ -141,6 +145,7 @@ body.theme-christmas {
 .sidebar .top-sidebar {
   height: 30px;
   transition: height var(--animation-duration) var(--animation-timing-curve);
+  margin-bottom: 0.5rem;
 }
 
 .sidebar.open .top-sidebar {
@@ -184,7 +189,7 @@ body.theme-christmas {
   overflow-y: auto;
   overflow-x: hidden;
   flex-grow: 1;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 .middle-sidebar,
@@ -266,7 +271,7 @@ body.theme-christmas {
   background: linear-gradient(
     331deg,
     var(--sidebar-background) 0%,
-    rgba(91, 104, 170, 1) 100%
+    var(--sidebar-background-gradient) 100%
   );
 }
 
@@ -320,11 +325,11 @@ body.theme-christmas {
   display: flex;
   justify-content: center;
   color: #fff;
-  background: var(--sidebar-background);
+  /* background: var(--sidebar-background); */
   background: linear-gradient(
     331deg,
     var(--sidebar-background) 0%,
-    rgba(91, 104, 170, 1) 100%
+    var(--sidebar-background-gradient) 100%
   );
 }
 
