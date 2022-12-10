@@ -325,7 +325,7 @@ body.theme-christmas {
 }
 
 .sidebar:not(.open) .sidebar-dropdown-header a:hover {
-  background-color: var(--lightest-gray);
+  /* background-color: var(--lightest-gray); */
   color: rgb(255, 255, 255);
 }
 
