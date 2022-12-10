@@ -261,23 +261,22 @@ body.theme-christmas {
 .sidebar-list-item {
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: space-between;
-  /* flex-grow: 1; */
 }
 
 .sidebar-list-item.active a.sidebar-link {
   background-color: var(--lightest-gray);
-  color: #000;
+  color: var(--dark-gray);
+}
+
+.sidebar-dropdown-item a {
+  margin-left: 41px;
 }
 
 .sidebar-list-item a:hover {
   background-color: var(--lightest-gray);
-}
-
-.sidebar-list-item a:hover {
   text-decoration: none;
-  color: #000;
+  color: var(--dark-gray);
 }
 
 .sidebar-list-item a:hover svg {
@@ -294,12 +293,6 @@ body.theme-christmas {
   background-color: var(--lightest-gray);
   text-decoration: none;
   color: #000;
-}
-
-.sidebar-dropdown-item a {
-  color: inherit;
-  text-decoration: inherit;
-  margin-left: 41px;
 }
 
 .dropdown-show {
@@ -320,17 +313,10 @@ body.theme-christmas {
 }
 
 .sidebar:not(.open) .sidebar-dropdown-header a:hover {
-  /* background-color: var(--lightest-gray); */
   color: rgb(255, 255, 255);
 }
 
-.sidebar-dropdown-header a:hover {
-  text-decoration: none;
-  color: rgb(138, 32, 32);
-}
-
 .sidebar-dropdown-header a {
-  color: inherit;
   flex-grow: 1;
 }
 
@@ -348,7 +334,6 @@ body.theme-christmas {
 
 .menu-icon-btn {
   display: block;
-  /* position: relative; */
   z-index: 100;
   background: none;
   outline: none;
