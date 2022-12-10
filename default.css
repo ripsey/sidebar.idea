@@ -237,7 +237,7 @@ body.theme-christmas {
 }
 
 .sidebar-list .active .sidebar-icon {
-  fill: var(--accent-color-secondary);
+  fill: var(--sidebar-icon-color);
 }
 
 /* .sidebar-list .hidden-sidebar {
