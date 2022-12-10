@@ -3,7 +3,7 @@
   --text-color: rgb(13, 13, 13);
   --wrapper-background: rgb(245, 245, 245);
   --accent-color: rgb(225, 255, 0);
-  --accent-color-secondary: rgb(225, 0, 116);
+  --accent-color-secondary: rgb(185, 65, 145);
   --lightest-gray: rgb(244, 244, 244);
   --light-gray: rgb(232, 232, 232);
   --medium-gray: rgb(96, 96, 96);
@@ -94,6 +94,7 @@ body.theme-christmas {
   background: var(--brand-name-hover);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
 }
 
 .brand-name {
@@ -153,9 +154,10 @@ body.theme-christmas {
 }
 
 .sidebar.open .hidden-sidebar {
-  display: block;
-  height: auto;
-  opacity: 1;
+  display: flex;
+  /* height: auto;
+  opacity: 1; */
+  align-items: center;
 }
 
 .sidebar .top-sidebar {
