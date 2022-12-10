@@ -285,9 +285,7 @@ body.theme-christmas {
 }
 
 .sidebar-dropdown-item {
-  width: 100%;
-  height: 0px;
-  opacity: 0;
+  display: none;
   color: #fff;
   background-color: var(--sidebar-dropdown-background);
 }
@@ -305,8 +303,9 @@ body.theme-christmas {
 }
 
 .dropdown-show {
-  height: 41px;
-  opacity: 1;
+  /* height: 41px;
+  opacity: 1; */
+  display: block;
 }
 
 .sidebar-dropdown-header {
@@ -420,12 +419,12 @@ body.theme-christmas {
 
 .sidebar .sidebar-list li .sub-menu li a {
   color: var(--lightest-gray);
-  background-color: var(--dark-gray) !important;
+  background-color: var(--dark-gray);
   text-decoration: none;
 }
 
 .sidebar .sidebar-list li .sub-menu li a:hover {
-  color: var(--accent-color) !important;
+  color: var(--accent-color);
 }
 
 .sidebar:not(.open) .sidebar-list li:hover .sub-menu {

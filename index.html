@@ -70,7 +70,7 @@
         </div>
         <div class="middle-sidebar">
           <ul class="sidebar-list">
-            <li class="sidebar-list-item active">
+            <li class="sidebar-list-item active1">
               <a href="another-dashboard-link.html" class="sidebar-link">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -132,11 +132,6 @@
             <li class="sidebar-dropdown-item" data-dropdown="products">
               <a href="#" class="sidebar-dropdown-link">
                 <div class="hidden-sidebar">Product 1</div>
-              </a>
-            </li>
-            <li class="sidebar-dropdown-item" data-dropdown="products">
-              <a href="#" class="sidebar-dropdown-link">
-                <div class="hidden-sidebar">Product 2</div>
               </a>
             </li>
             <li class="sidebar-list-item">
@@ -284,6 +279,10 @@
 
         <h2>Bugs</h2>
         <ul>
+          <li>
+            Menu item below a dropdown won't get highlighted on hover when
+            sidebar is open. (problem is height: 0)
+          </li>
           <li>Hover menu when sidebar is closed needs polishing</li>
           <li>Not a bug but dropdown items have a fixed height :(</li>
           <li>Most likely bugs in theme switcher, went too smoothly</li>
