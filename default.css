@@ -24,7 +24,7 @@
   --sidebar-width: 3.8rem;
   --sidebar-icon-color: rgb(185, 65, 145);
   --settings-background: rgb(32, 74, 138);
-  --settings-width: 12rem;
+  --settings-width: 14rem;
   --animation-duration: 0.3s;
   --animation-timing-curve: ease-in-out;
 }
@@ -214,7 +214,7 @@ body.theme-christmas {
   position: fixed;
   /* top: 0; */
   padding: 1rem;
-  right: -12rem;
+  right: -14rem;
   height: 100vh;
   width: var(--settings-width);
   /* max-width: 100%; */

@@ -91,3 +91,37 @@ radios.forEach((e) => {
 // } else {
 //   input.className = '';
 // }
+
+let checkAlwaysOpen = document.querySelector("#sidebar-always-open");
+checkAlwaysOpen.addEventListener("change", () => {
+  toggleSidebarAlwaysOpen();
+});
+
+let toggleSidebarAlwaysOpen = () => {
+  let sidebar_always_open = document.querySelector(
+    "#sidebar-always-open"
+  ).checked;
+  localStorage.setItem("sidebar_always_open", sidebar_always_open);
+  if (sidebar_always_open) {
+    sidebar.classList.add("open");
+  } else {
+    sidebar.classList.remove("open");
+  }
+};
+
+let sidebar_always_open = localStorage.getItem("sidebar_always_open");
+if (sidebar_always_open === "true") {
+  document.querySelector("#sidebar-always-open").checked = true;
+  sidebar.classList.add("open");
+}
+
+let dropdowns_always_open = localStorage.getItem("dropdowns_always_open");
+if (dropdowns_always_open === "true") {
+  document.querySelector("#dropdowns-always-open").checked = true;
+  let dropdowns = document.querySelectorAll(".sidebar-dropdown");
+  dropdowns.forEach((e) => {
+    e.classList.add("dropdown-show");
+    let arrowParent = e.closest("div");
+    arrowParent.style.transform = "rotate(180deg)";
+  });
+}
