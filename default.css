@@ -309,15 +309,10 @@ body.theme-christmas {
 }
 
 .sidebar-dropdown-header {
-  width: 100%;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  /* align-items: center; */
   color: #fff;
 }
-
-/* Bug here */
 
 .sidebar .sidebar-dropdown-header a:hover {
   background-color: var(--lightest-gray);
