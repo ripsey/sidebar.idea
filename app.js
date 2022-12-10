@@ -1,14 +1,13 @@
 const sidebar = document.querySelector("[data-sidebar]");
 const mobilemenu = document.querySelector(".menu-icon-btn");
 const settingsbar = document.querySelector("[data-settingsbar]");
+// optimize variables
 
-mobilemenu.addEventListener("click", () => {
-  toggleSidebar();
-});
+mobilemenu.addEventListener("click", () => toggleSidebar());
 
-settingsbar.addEventListener("click", () => {
-  document.querySelector(".settingsbar").classList.toggle("is-active");
-});
+settingsbar.addEventListener("click", () =>
+  document.querySelector(".settingsbar").classList.toggle("is-active")
+);
 toggleSidebar = () => {
   sidebar.classList.toggle("open");
   mobilemenu.classList.toggle("is-active");
