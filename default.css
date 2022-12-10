@@ -8,7 +8,7 @@
   --light-gray: rgb(232, 232, 232);
   --medium-gray: rgb(96, 96, 96);
   --dark-gray: rgb(13, 13, 13);
-  --header-height: 60px;
+  --header-height: 3.2rem;
   --header-background: rgb(232, 232, 232);
   --brand-name: rgb(29, 66, 95);
   --brand-name-hover: linear-gradient(
@@ -16,13 +16,14 @@
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
   );
-  --brand-icon: 60px;
+  --brand-icon: 5rem;
   --sidebar-background: rgb(58, 79, 148);
   --sidebar-dropdown-background: rgb(36, 73, 116);
-  --sidebar-width-open: 240px;
-  --sidebar-icon: 25px;
-  --sidebar-width: 60px;
+  --sidebar-width-open: 15rem;
+  --sidebar-icon: 1.8rem;
+  --sidebar-width: 3.8rem;
   --settings-background: rgb(32, 74, 138);
+  --settings-width: 12rem;
   --animation-duration: 0.3s;
   --animation-timing-curve: ease-in-out;
 }
@@ -141,7 +142,7 @@ body.theme-christmas {
 }
 
 .sidebar.open .top-sidebar {
-  height: 125px;
+  height: 9rem;
 }
 
 .sidebar .hidden-sidebar {
@@ -165,8 +166,8 @@ body.theme-christmas {
 
 .sidebar .brand-logo-svg {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 2.2rem;
+  height: 2.2rem;
   fill: var(--accent-color);
   transition: var(--animation-duration) var(--animation-timing-curve);
 }
@@ -207,14 +208,13 @@ body.theme-christmas {
 
 .settingsbar {
   background-color: var(--settings-background);
-  z-index: 80;
   position: fixed;
-  top: 1;
+  /* top: 0; */
   padding: 1rem;
-  right: -200px;
+  right: -12rem;
   height: 100vh;
-  width: 200px;
-  max-width: 100%;
+  width: var(--settings-width);
+  /* max-width: 100%; */
   transition: 0.3s linear;
   color: var(--lightest-gray);
 }
@@ -268,7 +268,7 @@ body.theme-christmas {
 }
 
 .sidebar-dropdown-item a {
-  margin-left: 41px;
+  /* margin-left: 41px; */
 }
 
 .sidebar-list-item a:hover {
