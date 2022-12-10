@@ -449,3 +449,11 @@ body.theme-christmas {
 .sub-menu li:nth-child(1) {
   font-weight: bold;
 }
+
+.sub-menu li a {
+  background-color: var(--dark-gray) !important;
+}
+
+.sub-menu li a:hover {
+  color: var(--accent-color) !important;
+}
