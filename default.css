@@ -18,7 +18,7 @@
   );
   --brand-icon: 5rem;
   --sidebar-background: rgb(58, 79, 148);
-  --sidebar-dropdown-background: rgb(36, 73, 116);
+  --sidebar-dropdown-background: rgb(172, 171, 171);
   --sidebar-width-open: 15rem;
   --sidebar-icon: 1.8rem;
   --sidebar-width: 3.8rem;
@@ -262,6 +262,12 @@ body.theme-christmas {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: var(--sidebar-background);
+  background: linear-gradient(
+    331deg,
+    var(--sidebar-background) 0%,
+    rgba(91, 104, 170, 1) 100%
+  );
 }
 
 .sidebar-list-item.active a.sidebar-link {
@@ -285,8 +291,17 @@ body.theme-christmas {
 
 .sidebar-dropdown-item {
   display: none;
-  color: #fff;
-  background-color: var(--sidebar-dropdown-background);
+  /* color: var(--dark-gray); */
+  /* background: rgb(201, 46, 46); */
+  background: linear-gradient(
+    331deg,
+    rgba(225, 225, 225, 1) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.sidebar-dropdown-item a {
+  color: var(--dark-gray);
 }
 
 .sidebar-dropdown-item:hover {
@@ -305,6 +320,12 @@ body.theme-christmas {
   display: flex;
   justify-content: center;
   color: #fff;
+  background: var(--sidebar-background);
+  background: linear-gradient(
+    331deg,
+    var(--sidebar-background) 0%,
+    rgba(91, 104, 170, 1) 100%
+  );
 }
 
 .sidebar .sidebar-dropdown-header a:hover {
