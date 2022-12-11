@@ -117,3 +117,26 @@ if (dropdowns_always_open === "true") {
   document.querySelector("#sidebar-dropdown-open").checked = true;
   toggleDropdownsAlwaysOpen();
 }
+
+//hide header
+document
+  .querySelector("#sidebar-hide-header")
+  .addEventListener("change", () => toggleHeader());
+
+toggleHeader = () => {
+  localStorage.setItem(
+    "hide_header",
+    document.querySelector("#sidebar-hide-header").checked
+  );
+  let hide_header = localStorage.getItem("hide_header");
+  if (hide_header === "true") {
+    document.querySelector(".top-sidebar").style.display = "none";
+  } else {
+    document.querySelector(".top-sidebar").style.display = "block";
+  }
+};
+
+if (localStorage.getItem("hide_header") === "true") {
+  document.querySelector("#sidebar-hide-header").checked = true;
+  toggleHeader();
+}

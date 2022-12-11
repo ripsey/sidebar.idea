@@ -31,6 +31,7 @@
   --sidebar-dropdown-background: rgb(172, 171, 171);
   --sidebar-width-open: 15rem;
   --sidebar-icon: 1.8rem;
+  --sidebar-dropdown-icon-hover: rgb(13, 13, 13);
   --sidebar-width: 3.8rem;
   --sidebar-icon-color: rgb(185, 65, 145);
   --settings-background: rgb(32, 74, 138);
@@ -127,7 +128,7 @@ body.theme-christmas {
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height));
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   align-items: center;
   justify-content: stretch;
   transition: width var(--animation-duration) var(--animation-timing-curve);
@@ -149,7 +150,7 @@ body.theme-christmas {
   align-items: center;
   height: 30px;
   transition: height var(--animation-duration) var(--animation-timing-curve);
-  margin-bottom: 1.3rem;
+  margin-block: 1.3rem;
 }
 
 .sidebar.open .top-sidebar {
@@ -253,7 +254,7 @@ body.theme-christmas {
 }
 
 .sidebar-dropdown-icon:hover {
-  background-color: var(--dark-gray);
+  background-color: var(--sidebar-dropdown-icon-hover);
 }
 
 .sidebar-list-item {
