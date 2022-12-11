@@ -77,6 +77,37 @@ body.theme-christmas {
   --accent-color-secondary: rgb(225, 0, 116);
 }
 
+@keyframes color {
+  0% {
+    background: #33cccc;
+  }
+  20% {
+    background: #33cc36;
+  }
+  40% {
+    background: #b8cc33;
+  }
+  60% {
+    background: #fcca00;
+  }
+  80% {
+    background: #33cc36;
+  }
+  100% {
+    background: #33cccc;
+  }
+}
+
+.disco {
+  background: #33cccc; /* Fallback */
+  animation: color 9s infinite alternate-reverse;
+}
+
+.disco-2 {
+  background: #33cccc; /* Fallback */
+  animation: color 4s infinite alternate;
+}
+
 .header {
   display: flex;
   align-items: center;

@@ -1,6 +1,7 @@
 const sidebar = document.querySelector("[data-sidebar]");
 const mobilemenu = document.querySelector(".menu-icon-btn");
 const settingsbar = document.querySelector("[data-settingsbar]");
+const topbar = document.querySelector(".header");
 // optimize variables
 
 mobilemenu.addEventListener("click", () => toggleSidebar());
@@ -140,3 +141,20 @@ if (localStorage.getItem("hide_header") === "true") {
   document.querySelector("#sidebar-hide-header").checked = true;
   toggleHeader();
 }
+
+// disco
+document.querySelector("#sidebar-disco").addEventListener("change", () => {
+  toggleDisco();
+});
+
+toggleDisco = () => {
+  sidebar.classList.toggle("disco");
+  topbar.classList.toggle("disco-2");
+  document
+    .querySelectorAll(".sidebar-list-item")
+    .forEach((e) => e.classList.toggle("disco"));
+  document
+    .querySelectorAll(".sidebar-dropdown-header")
+    .forEach((e) => e.classList.toggle("disco"));
+  document.querySelector(".settingsbar").classList.toggle("disco");
+};
