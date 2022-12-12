@@ -252,8 +252,8 @@ body.theme-christmas {
   right: -14rem;
   height: 100vh;
   width: var(--settings-width);
-  transition: 0.3s linear;
   color: var(--lightest-gray);
+  overflow-y: auto;
 }
 
 .settingsbar.is-active {
