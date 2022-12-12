@@ -99,6 +99,14 @@ body.theme-christmas {
   }
 }
 
+.preload-transitions * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 .disco {
   background: #33cccc;
   animation: color 9s infinite alternate-reverse;
@@ -168,6 +176,7 @@ body.theme-christmas {
   background-color: var(--sidebar-background);
   z-index: 0;
   overflow: visible;
+  transition: width 0.3s ease-out;
 }
 
 .sidebar.open {

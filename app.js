@@ -23,12 +23,13 @@ closeSidebar = () => {
 };
 
 toggleArrow = (e) => {
-  if (e.querySelector("i").classList.contains("bi-chevron-up")) {
-    e.querySelector("i").classList.remove("bi-chevron-up");
-    e.querySelector("i").classList.add("bi-chevron-down");
+  let arrow = e.querySelector("i");
+  if (arrow.classList.contains("bi-chevron-up")) {
+    arrow.classList.remove("bi-chevron-up");
+    arrow.classList.add("bi-chevron-down");
   } else {
-    e.querySelector("i").classList.add("bi-chevron-up");
-    e.querySelector("i").classList.remove("bi-chevron-down");
+    arrow.classList.add("bi-chevron-up");
+    arrow.classList.remove("bi-chevron-down");
   }
 };
 
@@ -166,3 +167,9 @@ toggleDisco = () => {
     .forEach((e) => e.classList.toggle("disco"));
   document.querySelector(".settingsbar").classList.toggle("disco");
 };
+
+// load transitions 2 seconds after page load
+setTimeout(function () {
+  let node = document.querySelector(".preload-transitions");
+  node.classList.remove("preload-transitions");
+}, 2000);
