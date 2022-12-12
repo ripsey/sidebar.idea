@@ -308,11 +308,12 @@ body.theme-christmas {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: var(--sidebar-background);
+  /* background: var(--sidebar-background); */
 }
 
 .sidebar-list-item a:hover {
-  background-color: var(--lightest-gray);
+  /* background-color: var(--lightest-gray); */
+  background-color: white;
   text-decoration: none;
   color: var(--dark-gray);
 }
