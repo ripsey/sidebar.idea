@@ -35,7 +35,8 @@
   --sidebar-dropdown-icon-hover: rgb(55, 110, 182);
   --sidebar-width: 3.8rem;
   --sidebar-icon-color: rgb(185, 65, 145);
-  --settings-background: rgb(18, 59, 97);
+  --settings-background: rgb(37, 112, 161);
+  --settings-background-hover: rgb(20, 61, 100);
   --settings-width: 14rem;
   --animation-duration: 0s; /** this was 0.3 **/
   --animation-timing-curve: ease-in-out;
@@ -479,6 +480,8 @@ body.theme-christmas {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--settings-background);
+  color: var(--lightest-gray);
   gap: 0.5rem;
   padding-inline: 0.5rem;
   border: 0;
@@ -486,6 +489,6 @@ body.theme-christmas {
 }
 
 .profile-settings-btn:hover {
-  background-color: var(--settings-background);
+  background-color: var(--settings-background-hover);
   color: var(--lightest-gray);
 }
