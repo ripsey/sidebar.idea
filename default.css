@@ -296,7 +296,7 @@ body.theme-christmas {
 
 .sidebar-dropdown-icon {
   padding: 0.3rem 0.75rem;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .sidebar-dropdown-icon:hover {
@@ -465,4 +465,27 @@ body.theme-christmas {
 
 .sidebar.open .sidebar-list li .sub-menu {
   display: none;
+}
+
+.profile-picture {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.profile-settings-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-inline: 0.5rem;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.profile-settings-btn:hover {
+  background-color: var(--settings-background);
+  color: var(--lightest-gray);
 }
