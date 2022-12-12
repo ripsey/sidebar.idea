@@ -130,11 +130,9 @@ toggleHeader = () => {
     document.querySelector("#sidebar-hide-header").checked
   );
   let hide_header = localStorage.getItem("hide_header");
-  if (hide_header === "true") {
-    document.querySelector(".top-sidebar").style.display = "none";
-  } else {
-    document.querySelector(".top-sidebar").style.display = "block";
-  }
+  if (hide_header === "true")
+    document.querySelector(".top-sidebar").classList.add("d-none");
+  else document.querySelector(".top-sidebar").classList.remove("d-none");
 };
 
 if (localStorage.getItem("hide_header") === "true") {
