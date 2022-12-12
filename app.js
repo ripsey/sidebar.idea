@@ -23,13 +23,14 @@ closeSidebar = () => {
 };
 
 toggleArrow = (e) => {
-  let arrowParent = e.closest("div");
-  if (e.getAttribute("aria-expanded") === "true") {
-    e.setAttribute("aria-expanded", "false");
-    arrowParent.style.transform = "rotate(0deg)";
+  if (e.getAttribute("data-expanded") === "true") {
+    e.setAttribute("data-expanded", "false");
+    e.querySelector("i").classList.remove("bi-chevron-up");
+    e.querySelector("i").classList.add("bi-chevron-down");
   } else {
-    e.setAttribute("aria-expanded", "true");
-    arrowParent.style.transform = "rotate(180deg)";
+    e.setAttribute("data-expanded", "true");
+    e.querySelector("i").classList.add("bi-chevron-up");
+    e.querySelector("i").classList.remove("bi-chevron-down");
   }
 };
 

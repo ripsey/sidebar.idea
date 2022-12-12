@@ -100,12 +100,12 @@ body.theme-christmas {
 }
 
 .disco {
-  background: #33cccc; /* Fallback */
+  background: #33cccc;
   animation: color 9s infinite alternate-reverse;
 }
 
 .disco-2 {
-  background: #33cccc; /* Fallback */
+  background: #33cccc;
   animation: color 4s infinite alternate;
 }
 
@@ -160,10 +160,8 @@ body.theme-christmas {
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height));
-  /* padding-top: 1rem; */
   align-items: center;
   justify-content: stretch;
-  transition: width var(--animation-duration) var(--animation-timing-curve);
   position: sticky;
   left: 0;
   top: var(--header-height);
@@ -181,7 +179,6 @@ body.theme-christmas {
   flex-direction: column;
   align-items: center;
   height: 30px;
-  transition: height var(--animation-duration) var(--animation-timing-curve);
   margin-block: 1.3rem;
 }
 
@@ -191,7 +188,6 @@ body.theme-christmas {
 
 .sidebar .hidden-sidebar {
   display: none;
-  transition: opacity var(--animation-duration) var(--animation-timing-curve);
 }
 
 .sidebar.open .hidden-sidebar {
@@ -200,11 +196,9 @@ body.theme-christmas {
 }
 
 .sidebar .brand-logo-svg {
-  /* display: block; */
   width: 2.2rem;
   height: 2.2rem;
   fill: var(--accent-color);
-  transition: var(--animation-duration) var(--animation-timing-curve);
 }
 
 .sidebar.open .brand-logo-svg {
@@ -304,11 +298,6 @@ body.theme-christmas {
   flex-direction: column;
   justify-content: space-between;
   background: var(--sidebar-background);
-  /* background: linear-gradient(
-    331deg,
-    var(--sidebar-background) 0%,
-    var(--sidebar-background-gradient) 100%
-  ); */
 }
 
 .sidebar-list-item a:hover {
@@ -352,11 +341,6 @@ body.theme-christmas {
   display: flex;
   justify-content: center;
   color: #fff;
-  /* background: linear-gradient(
-    0deg,
-    var(--sidebar-background-gradient) 0%,
-    var(--sidebar-background-gradient2) 100%
-  ); */
 }
 
 .sidebar .sidebar-dropdown-header a:hover {
