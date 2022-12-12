@@ -130,7 +130,7 @@ if (dropdowns_always_open === "true") {
   toggleDropdownsAlwaysOpen();
 }
 
-//hide header
+// hide header
 document
   .querySelector("#sidebar-hide-header")
   .addEventListener("change", () => toggleHeader());
@@ -161,15 +161,15 @@ toggleDisco = () => {
   topbar.classList.toggle("disco-2");
   document
     .querySelectorAll(".sidebar-list-item")
-    .forEach((e) => e.classList.toggle("disco"));
+    .forEach((e) => e.classList.toggle("disco-2"));
   document
     .querySelectorAll(".sidebar-dropdown-header")
-    .forEach((e) => e.classList.toggle("disco"));
+    .forEach((e) => e.classList.toggle("disco-2"));
   document.querySelector(".settingsbar").classList.toggle("disco");
 };
 
-// load transitions 2 seconds after page load
+// load transitions x seconds after page load
 setTimeout(function () {
   let node = document.querySelector(".preload-transitions");
   node.classList.remove("preload-transitions");
-}, 2000);
+}, 500);
