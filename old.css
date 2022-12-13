@@ -80,16 +80,16 @@ body.theme-dark {
     background: #33cccc;
   }
   20% {
-    background: #782d9b;
+    background: #33cc36;
   }
   40% {
-    background: #3bac57;
+    background: #b8cc33;
   }
   60% {
     background: #fcca00;
   }
   80% {
-    background: #d66d27;
+    background: #33cc36;
   }
   100% {
     background: #33cccc;
@@ -115,17 +115,17 @@ body.theme-dark {
 }
 
 .header {
-  position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  position: sticky;
   top: 0;
   background-color: var(--header-background);
   box-shadow: 0 1px 10px 0 #00000066;
   padding: 0 0.5rem;
   height: var(--header-height);
-  z-index: 99;
+  z-index: 100;
 }
 
 .brand-name-top {
@@ -145,6 +145,7 @@ body.theme-dark {
   color: var(--lightest-gray);
   font-size: 2rem;
   font-weight: bold;
+  /* margin-bottom: 0.15rem; */
   margin-top: 0.5rem;
 }
 .wrapper {
@@ -157,12 +158,17 @@ body.theme-dark {
 }
 
 .sidebar {
+  /* flex-shrink: 0; */
+  /* overflow: hidden; */
   width: var(--sidebar-width);
+  /* border-right: 1px solid var(--light-gray); */
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height));
+  /* align-items: center; */
   justify-content: stretch;
   position: sticky;
+  /* left: 0; */
   top: var(--header-height);
   background-color: var(--sidebar-background);
   z-index: 1;
@@ -172,12 +178,14 @@ body.theme-dark {
 
 .sidebar.open {
   width: var(--sidebar-width-open);
+  /* width: 100%; */
 }
 
 .sidebar .top-sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* height: 30px; */
   margin-block: 1.3rem;
 }
 
@@ -221,6 +229,7 @@ body.theme-dark {
   padding: 0;
   display: flex;
   flex-direction: column;
+  /* list-style: none; */
   white-space: nowrap;
 }
 
@@ -282,10 +291,12 @@ body.theme-dark {
   color: #fff;
   text-decoration: none;
   gap: 1rem;
+  /* justify-content: center; */
 }
 
 .sidebar-dropdown-icon {
   padding: 0.3rem 0.75rem;
+  /* cursor: pointer; */
 }
 
 .sidebar-dropdown-icon:hover {
@@ -296,9 +307,11 @@ body.theme-dark {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* background: var(--sidebar-background); */
 }
 
 .sidebar-list-item a:hover {
+  /* background-color: var(--lightest-gray); */
   background-color: white;
   text-decoration: none;
   color: var(--dark-gray);
