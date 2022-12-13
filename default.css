@@ -104,22 +104,12 @@ body.theme-dark {
   transition: none !important;
 }
 
-.disco {
-  background: #33cccc;
-  animation: color 9s infinite alternate-reverse;
-}
-
-.disco-2 {
-  background: #33cccc;
-  animation: color 4s infinite alternate;
-}
-
 .topbar {
   position: sticky;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
-  gap: 1rem;
+  /* gap: 1rem; */
   top: 0;
   height: var(--header-height);
   background-color: var(--header-background);
@@ -148,13 +138,13 @@ body.theme-dark {
   display: flex;
   flex-direction: column;
   height: calc(100vh - var(--header-height));
-  justify-content: stretch;
+  /* justify-content: stretch; */
   position: sticky;
   top: var(--header-height);
   background-color: var(--sidebar-background);
   z-index: 1;
   overflow: visible;
-  transition: width 0.3s ease-in;
+  transition: all 0.3s;
 }
 
 .sidebar.open {
@@ -198,16 +188,16 @@ body.theme-dark {
   flex-grow: 1;
 }
 
-.middle-sidebar,
+/* .middle-sidebar,
 .bottom-sidebar {
-  /* flex-direction: column; */
-}
+  flex-direction: column;
+} */
 
 .sidebar-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   white-space: nowrap;
 }
 
@@ -470,4 +460,14 @@ body.theme-dark {
 .sidebar:not(.open) .sidebar-list li:hover a.sidebar-dropdown-link {
   background-color: white;
   color: var(--accent-color-secondary);
+}
+
+.disco {
+  background: #33cccc;
+  animation: color 9s infinite alternate-reverse;
+}
+
+.disco-2 {
+  background: #33cccc;
+  animation: color 4s infinite alternate;
 }
