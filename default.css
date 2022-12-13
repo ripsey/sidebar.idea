@@ -149,6 +149,10 @@ footer {
   text-align: center;
 }
 
+footer a {
+  color: var(--dark-gray);
+}
+
 .sidebar {
   width: var(--sidebar-width);
   display: flex;
