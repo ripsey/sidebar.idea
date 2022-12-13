@@ -18,7 +18,6 @@
   --brand-name-hover: linear-gradient(331deg, #3f5efb 0%, #fc466b 100%);
   --dark-gray: #0d0d0d;
   --header-background: #e8e8e8;
-  --header-height: 3.2rem;
   --light-gray: #e8e8e8;
   --lightest-gray: #f4f4f4;
   --medium-gray: #606060;
@@ -92,7 +91,7 @@ body.theme-dark {
     background: #d66d27;
   }
   100% {
-    background: #33cccc;
+    background: #3d33cc;
   }
 }
 
@@ -114,7 +113,7 @@ body.theme-dark {
   animation: color 4s infinite alternate;
 }
 
-.header {
+.topbar {
   position: sticky;
   display: flex;
   align-items: center;
@@ -123,29 +122,8 @@ body.theme-dark {
   top: 0;
   background-color: var(--header-background);
   box-shadow: 0 1px 10px 0 #00000066;
-  padding: 0 0.5rem;
-  height: var(--header-height);
+  padding: 0.3rem 0.5rem;
   z-index: 99;
-}
-
-.brand-name-top {
-  color: var(--brand-name);
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.brand-name-top:hover {
-  background: var(--brand-name-hover);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: default;
-}
-
-.brand-name {
-  color: var(--lightest-gray);
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
 }
 .wrapper {
   display: flex;
@@ -160,10 +138,10 @@ body.theme-dark {
   width: var(--sidebar-width);
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--header-height));
+  /* height: calc(100vh - var(--header-height)); */
   justify-content: stretch;
   position: sticky;
-  top: var(--header-height);
+  /* top: var(--header-height); */
   background-color: var(--sidebar-background);
   z-index: 1;
   overflow: visible;
@@ -457,7 +435,7 @@ body.theme-dark {
   height: 20px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
 }
 
 .profile-settings-btn {
