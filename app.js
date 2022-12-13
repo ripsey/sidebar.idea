@@ -156,3 +156,13 @@ setTimeout(() => {
     .querySelector(".preload-transitions")
     .classList.remove("preload-transitions");
 }, 500);
+// go back to top
+let top_btn = document.querySelector("#go-to-top");
+top_btn.addEventListener("click", () => {
+  topFunction();
+});
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

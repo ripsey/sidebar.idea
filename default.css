@@ -153,6 +153,25 @@ footer a {
   color: var(--dark-gray);
 }
 
+footer a:hover {
+  color: var(--accent-color-secondary);
+}
+
+footer button {
+  border: none;
+  background-color: transparent;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .sidebar {
   width: var(--sidebar-width);
   display: flex;
@@ -164,7 +183,7 @@ footer a {
   background-color: var(--sidebar-background);
   z-index: 1;
   overflow: visible;
-  transition: all 0.3s;
+  transition: width 0.3s;
 }
 
 .sidebar.open {
