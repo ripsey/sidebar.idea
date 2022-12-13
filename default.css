@@ -121,9 +121,10 @@ body.theme-dark {
   justify-content: space-between;
   gap: 1rem;
   top: 0;
+  height: var(--header-height);
   background-color: var(--header-background);
   box-shadow: 0 1px 10px 0 #00000066;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 0.5rem;
   z-index: 99;
 }
 
@@ -199,7 +200,7 @@ body.theme-dark {
 
 .middle-sidebar,
 .bottom-sidebar {
-  width: 100%;
+  /* flex-direction: column; */
 }
 
 .sidebar-list {
@@ -278,11 +279,10 @@ body.theme-dark {
   background-color: var(--sidebar-dropdown-icon-hover);
 }
 
-/* .sidebar-list-item {
+.sidebar-list-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-} */
+}
 
 .sidebar-list-item a:hover {
   background-color: white;
