@@ -36,6 +36,8 @@
   --sidebar-width-open: 15rem;
   --text-color: #0d0d0d;
   --wrapper-background: #f5f5f5;
+  --footer-background: #e1ff00;
+  --footer-color: #000;
 }
 
 body.theme-belgium {
@@ -128,9 +130,23 @@ body.theme-dark {
   display: flex;
   background-color: var(--wrapper-background);
 }
+
 .content {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
   margin: 1rem;
   overflow-y: auto;
+}
+
+footer {
+  color: var(--footer-color);
+  padding: 1rem;
+  background-color: var(--footer-background);
+  flex-grow: 1;
+  text-align: center;
 }
 
 .sidebar {

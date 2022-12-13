@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <header class="topbar">
+    <section class="topbar">
       <button class="menu-icon-btn">
         <span></span>
         <span></span>
@@ -54,7 +54,7 @@
           <i class="bi bi-chevron-down"></i>
         </button>
       </div>
-    </header>
+    </section>
     <section class="wrapper">
       <aside class="sidebar" data-sidebar>
         <div class="top-sidebar">
@@ -72,7 +72,7 @@
           ></a>
           <div class="brand-name hidden-sidebar">Ripsey</div>
         </div>
-        <div class="middle-sidebar">
+        <nav class="middle-sidebar">
           <ul class="sidebar-list">
             <li class="sidebar-list-item is-active">
               <a href="another-dashboard-link.html" class="sidebar-link">
@@ -347,7 +347,7 @@
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
         <div class="bottom-sidebar">
           <ul class="sidebar-list">
             <li class="sidebar-list-item">
@@ -373,68 +373,78 @@
           </ul>
         </div>
       </aside>
-      <main class="content">
-        <h1>The ultimate sidebar 💎</h1>
-        <p>Trying to build the ultimate sidebar.</p>
-        <h2>To do list</h2>
-        <ol>
-          <li>Optimize EVERYTHING</li>
-          <li>Remove Bootstrap</li>
-          <li>Optimize everything again</li>
-        </ol>
+      <section class="content">
+        <main>
+          <h1>The ultimate sidebar 💎</h1>
+          <p>Trying to build the ultimate sidebar.</p>
 
-        <h2>Done</h2>
-        <ol>
-          <li>When hovering over submenu highlight is gone in sidebar</li>
-          <li>Transition is broken on settingsbar</li>
-          <li>Ugly vertical scrollbar in settingsmenu</li>
-          <li>Change settings button to profile icon</li>
-          <li>Add sidebar transition but not on page load</li>
-          <li>Dropdown arrows not rotating when using always open dropdowns</li>
-          <li>Test is-active class</li>
-          <li>Remove unnecessary transitions</li>
-          <li>Disco option</li>
-          <li>Hide top bar option</li>
-          <li>Sidebar add gradients</li>
-          <li>Dropdowns always open</li>
-          <li>Sidebar always open</li>
-          <li>Change px to rem</li>
-          <li>Hover menu when sidebar is closed</li>
-          <li>Theme options</li>
-          <li>Save theme and check if theme is set</li>
-          <li>Theme switcher</li>
-          <li>Settings menu</li>
-          <li>Dropdowns</li>
-          <li>Icons to SVG</li>
-          <li>Sidebar closes on small screens</li>
-          <li>Hamburger menu</li>
-        </ol>
+          <h2>To do list</h2>
+          <ol>
+            <li>Make footer better, this is ****</li>
+            <li>Optimize EVERYTHING</li>
+            <li>Remove Bootstrap</li>
+            <li>Optimize everything again</li>
+          </ol>
 
-        <h2>Bugs</h2>
-        <ul>
-          <li>
-            When sidebar is closed and you scroll through middle sidebar the
-            hover menu (on very small screens) bugs out only after you scroll
-            due to the fixed position or height
-          </li>
-        </ul>
+          <h2>Done</h2>
+          <ol>
+            <li>Footer</li>
+            <li>When hovering over submenu highlight is gone in sidebar</li>
+            <li>Transition is broken on settingsbar</li>
+            <li>Ugly vertical scrollbar in settingsmenu</li>
+            <li>Change settings button to profile icon</li>
+            <li>Add sidebar transition but not on page load</li>
+            <li>
+              Dropdown arrows not rotating when using always open dropdowns
+            </li>
+            <li>Test is-active class</li>
+            <li>Remove unnecessary transitions</li>
+            <li>Disco option</li>
+            <li>Hide top bar option</li>
+            <li>Sidebar add gradients</li>
+            <li>Dropdowns always open</li>
+            <li>Sidebar always open</li>
+            <li>Change px to rem</li>
+            <li>Hover menu when sidebar is closed</li>
+            <li>Theme options</li>
+            <li>Save theme and check if theme is set</li>
+            <li>Theme switcher</li>
+            <li>Settings menu</li>
+            <li>Dropdowns</li>
+            <li>Icons to SVG</li>
+            <li>Sidebar closes on small screens</li>
+            <li>Hamburger menu</li>
+          </ol>
 
-        <h2>Solved bugs</h2>
-        <ul>
-          <li>Settingsbar is not scrollable</li>
-          <li>Submenu links are clickable if invisible</li>
-          <li>Hamburger menu icon is bugged with always open option</li>
-          <li>Sidebar closes on resizing with always open option</li>
-          <li>Menu icon btn doesnt change when you switch to always open</li>
-          <li>Hover menu when sidebar is closed needs polishing</li>
-          <li>Dropdown items have a fixed height</li>
-          <li>
-            Menu item below a dropdown won't get highlighted on hover when
-            sidebar is open
-          </li>
-          <li>Hamburger menu is not exactly in the middle</li>
-        </ul>
-      </main>
+          <h2>Bugs</h2>
+          <ul>
+            <li>
+              When sidebar is closed and you scroll through middle sidebar the
+              hover menu (on very small screens) bugs out only after you scroll
+              due to the fixed position or height
+            </li>
+          </ul>
+
+          <h2>Solved bugs</h2>
+          <ul>
+            <li>Settingsbar is not scrollable</li>
+            <li>Submenu links are clickable if invisible</li>
+            <li>Hamburger menu icon is bugged with always open option</li>
+            <li>Sidebar closes on resizing with always open option</li>
+            <li>Menu icon btn doesnt change when you switch to always open</li>
+            <li>Hover menu when sidebar is closed needs polishing</li>
+            <li>Dropdown items have a fixed height</li>
+            <li>
+              Menu item below a dropdown won't get highlighted on hover when
+              sidebar is open
+            </li>
+            <li>Hamburger menu is not exactly in the middle</li>
+          </ul>
+        </main>
+        <footer>
+          <p>© 2022 Ripsey services</p>
+        </footer>
+      </section>
       <aside class="settingsbar">
         <h3>Account</h3>
         <p class="mb-0 fw-bold">Name</p>
