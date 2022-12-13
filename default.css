@@ -18,6 +18,7 @@
   --brand-name-hover: linear-gradient(331deg, #3f5efb 0%, #fc466b 100%);
   --dark-gray: #0d0d0d;
   --header-background: #e8e8e8;
+  --header-height: 2.5rem;
   --light-gray: #e8e8e8;
   --lightest-gray: #f4f4f4;
   --medium-gray: #606060;
@@ -122,7 +123,7 @@ body.theme-dark {
   top: 0;
   background-color: var(--header-background);
   box-shadow: 0 1px 10px 0 #00000066;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 1rem;
   z-index: 99;
 }
 
@@ -145,10 +146,10 @@ body.theme-dark {
   width: var(--sidebar-width);
   display: flex;
   flex-direction: column;
-  /* height: calc(100vh - var(--header-height)); */
+  height: calc(100vh - var(--header-height));
   justify-content: stretch;
   position: sticky;
-  /* top: var(--header-height); */
+  top: var(--header-height);
   background-color: var(--sidebar-background);
   z-index: 1;
   overflow: visible;
@@ -263,7 +264,7 @@ body.theme-dark {
 .sidebar-link,
 .sidebar-dropdown-link {
   display: flex;
-  padding: 0.3rem 0.75rem;
+  padding: 0.5rem 0.75rem;
   color: #fff;
   text-decoration: none;
   gap: 1rem;
@@ -277,11 +278,11 @@ body.theme-dark {
   background-color: var(--sidebar-dropdown-icon-hover);
 }
 
-.sidebar-list-item {
+/* .sidebar-list-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */
 
 .sidebar-list-item a:hover {
   background-color: white;
@@ -307,9 +308,8 @@ body.theme-dark {
 }
 
 .sidebar-dropdown-item:hover {
-  background-color: var(--lightest-gray);
-  text-decoration: none;
-  color: #000;
+  /* background-color: var(--lightest-gray); */
+  /* text-decoration: none; */
 }
 
 .dropdown-show {
@@ -318,8 +318,8 @@ body.theme-dark {
 
 .sidebar-dropdown-header {
   display: flex;
-  justify-content: center;
   color: #fff;
+  /* justify-content: center; */
 }
 
 .sidebar .sidebar-dropdown-header a:hover {
@@ -327,9 +327,9 @@ body.theme-dark {
   color: #000;
 }
 
-.sidebar:not(.open) .sidebar-dropdown-header a:hover {
+/* .sidebar:not(.open) .sidebar-dropdown-header a:hover {
   color: #ffffff;
-}
+} */
 
 .sidebar-dropdown-header a {
   flex-grow: 1;
