@@ -125,6 +125,13 @@ body.theme-dark {
   padding: 0.3rem 0.5rem;
   z-index: 99;
 }
+
+.brand-name {
+  color: var(--lightest-gray);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
 .wrapper {
   display: flex;
   background-color: var(--wrapper-background);
