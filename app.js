@@ -161,6 +161,7 @@ topFunction = () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
-
 let top_btn = document.querySelector("#go-to-top");
-top_btn.addEventListener("click", () => topFunction());
+top_btn.addEventListener("click", () => {
+  topFunction();
+});
