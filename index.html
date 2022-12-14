@@ -29,7 +29,7 @@
           <span></span>
         </button>
         <div class="d-flex gap-2">
-          <div class="dropdown">
+          <div class="dropdown d-none d-sm-block">
             <a
               class="btn btn-sm btn-secondary dropdown-toggle"
               href="#"
@@ -46,7 +46,7 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </div>
-          <button type="button" class="btn btn-sm btn-dark">
+          <button type="button" class="btn btn-sm btn-dark d-none d-md-block">
             <i class="bi bi-envelope-fill"></i>
           </button>
           <button
@@ -468,6 +468,29 @@
           </footer>
         </section>
         <aside class="settingsbar">
+          <div class="dropdown d-sm-none">
+            <a
+              class="btn btn-sm btn-light dropdown-toggle w-100 mb-2"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Something
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn btn-sm btn-dark d-sm-none w-100 mb-2"
+          >
+            <i class="bi bi-envelope-fill"></i>
+          </button>
           <h3>Account</h3>
           <p class="mb-0 fw-bold">Name</p>
           <p class="mb-0">Niels Whoever</p>
