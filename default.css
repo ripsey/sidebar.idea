@@ -17,8 +17,11 @@
   --brand-name: #1d425f;
   --brand-name-hover: linear-gradient(331deg, #3f5efb 0%, #fc466b 100%);
   --dark-gray: #0d0d0d;
-  --header-background: #e8e8e8;
-  --header-height: 2.5rem;
+  --header-color: #ffffff;
+  --header-background: #33a05d;
+  --header-background-gradient: #33a05d;
+  --topbar-background: #e8e8e8;
+  --topbar-height: 2.5rem;
   --light-gray: #e8e8e8;
   --lightest-gray: #f4f4f4;
   --medium-gray: #606060;
@@ -44,7 +47,7 @@ body.theme-belgium {
   --accent-color: #b41a1a;
   --accent-color-secondary: #e10074;
   --brand-name: #fff;
-  --header-background: #ccc916;
+  --topbar-background: #ccc916;
   --settings-background: #5c1c1c;
   --sidebar-background: #2e2e29;
   --sidebar-background-gradient: #838383;
@@ -56,7 +59,7 @@ body.theme-christmas {
   --accent-color: #00aeff;
   --accent-color-secondary: #e10074;
   --brand-name: #e2e9ee;
-  --header-background: #2e5f29;
+  --topbar-background: #2e5f29;
   --settings-background: #332323;
   --sidebar-background: #832323;
   --sidebar-background-gradient: #6b1a1a;
@@ -68,7 +71,7 @@ body.theme-dark {
   color: #fff;
   --accent-color: #e1ff00;
   --accent-color-secondary: #e10074;
-  --header-background: #fff;
+  --topbar-background: #fff;
   --settings-background: #332323;
   --sidebar-background: #2e2e2e;
   --sidebar-background-gradient: #646464;
@@ -113,8 +116,8 @@ body.theme-dark {
   justify-content: space-between;
   /* gap: 1rem; */
   top: 0;
-  height: var(--header-height);
-  background-color: var(--header-background);
+  height: var(--topbar-height);
+  background-color: var(--topbar-background);
   box-shadow: 0 1px 10px 0 #00000066;
   padding: 0.3rem 0.25rem;
   z-index: 99;
@@ -177,10 +180,10 @@ footer p {
   width: var(--sidebar-width);
   display: flex;
   flex-direction: column;
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--topbar-height));
   /* justify-content: stretch; */
   position: sticky;
-  top: var(--header-height);
+  top: var(--topbar-height);
   background-color: var(--sidebar-background);
   z-index: 1;
   overflow: visible;
@@ -390,7 +393,10 @@ footer p {
 }
 
 .menu-icon-btn span:nth-child(1) {
-  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.menu-icon-btn span:nth-child(2) {
+  margin-bottom: 5px;
 }
 
 .menu-icon-btn span {
@@ -398,7 +404,6 @@ footer p {
   display: block;
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
   z-index: 100;
   transform-origin: 0 0;
   transition: 0.4s;
@@ -510,4 +515,15 @@ footer p {
 .disco-2 {
   background: #33cccc;
   animation: color 4s infinite alternate;
+}
+
+header.header {
+  color: var(--header-color);
+  background-color: var(--header-background);
+  background: linear-gradient(
+    317deg,
+    var(--header-background-gradient) 0%,
+    var(--header-background) 100%
+  );
+  padding: 2rem;
 }
