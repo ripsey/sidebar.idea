@@ -15,7 +15,7 @@
   --animation-timing-curve: ease-in-out;
   --brand-icon: 4.5rem;
   --dark-gray: #0d0d0d;
-  --footer-background: #e1ff00;
+  --footer-background: #afff19;
   --footer-color: #000;
   --header-background: #33a05d;
   --header-background-gradient: #33a05d;
@@ -51,6 +51,8 @@ body.theme-belgium {
   --sidebar-background-gradient: #838383;
   --sidebar-dropdown-background: #9c4b4b;
   --topbar-background: #ccc916;
+  --footer-background: #e1ff00;
+  --footer-color: #000;
 }
 
 body.theme-christmas {
@@ -64,6 +66,8 @@ body.theme-christmas {
   --sidebar-background-gradient: #6b1a1a;
   --sidebar-dropdown-background: #8f2929;
   --topbar-background: #2e5f29;
+  --footer-background: #e1ff00;
+  --footer-color: #000;
 }
 
 body.theme-dark {
@@ -78,6 +82,8 @@ body.theme-dark {
   --sidebar-background-gradient: #646464;
   --sidebar-dropdown-background: #1e1e1e;
   --topbar-background: #fff;
+  --footer-background: #e1ff00;
+  --footer-color: #000;
   --wrapper-background: #1e1e1e;
 }
 
@@ -244,7 +250,7 @@ footer button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-block: 1.3rem;
+  margin-block: 1rem;
 }
 
 .sidebar.open .hidden-sidebar {
@@ -438,8 +444,9 @@ footer button {
 }
 
 footer a,
+footer button,
 .sidebar-dropdown-item a {
-  color: var(--dark-gray);
+  color: var(--footer-color);
 }
 
 footer a:hover,
