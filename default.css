@@ -26,6 +26,8 @@
   --settings-background: #634077;
   --settings-background-hover: #493b52;
   --settings-width: 14rem;
+  --sidebar-top-color: #fff;
+  --sidebar-top-background: #233981;
   --sidebar-background: #233981;
   --sidebar-background-gradient: #1b4479;
   --sidebar-background-gradient2: #072d5f;
@@ -134,7 +136,7 @@ body.theme-dark {
 }
 
 .brand-name {
-  color: var(--lightest-gray);
+  color: var(--sidebar-top-color);
   font-size: 2rem;
   font-weight: bold;
   margin-top: 0.5rem;
@@ -250,7 +252,8 @@ footer button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-block: 1rem;
+  background-color: var(--sidebar-top-background);
+  padding: 1rem;
 }
 
 .sidebar.open .hidden-sidebar {
