@@ -157,10 +157,8 @@ setTimeout(() => {
     .classList.remove("preload-transitions");
 }, 500);
 // go back to top
-topFunction = () => {
+goToTop = () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
-document
-  .querySelector("#go-to-top")
-  .addEventListener("click", () => topFunction());
+document.querySelector("#go-to-top").addEventListener("click", goToTop);
