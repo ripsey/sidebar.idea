@@ -20,26 +20,6 @@ mobilemenu.addEventListener("click", () => toggleSidebar());
 settingsbar_btn.addEventListener("click", () =>
   settingsbar.classList.toggle("is-active")
 );
-toggleDropdownArrow = (e) => {
-  let arrow = e.querySelector("i");
-  if (arrow.classList.contains("bi-chevron-up")) {
-    arrow.classList.remove("bi-chevron-up");
-    arrow.classList.add("bi-chevron-down");
-  } else {
-    arrow.classList.add("bi-chevron-up");
-    arrow.classList.remove("bi-chevron-down");
-  }
-};
-let allDropdownIcons = document.querySelectorAll(".sidebar-dropdown-icon");
-allDropdownIcons.forEach((e) => {
-  e.addEventListener("click", () => {
-    toggleDropdownArrow(e);
-    let dropdownArrow = document.querySelectorAll(
-      "[data-dropdown=" + e.getAttribute("data-dropdown-header") + "]"
-    );
-    dropdownArrow.forEach((e) => e.classList.toggle("dropdown-show"));
-  });
-});
 // close sidebar on resize
 window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
@@ -62,26 +42,33 @@ if (localStorage.getItem("TUS_sidebar_always_open") === "true") {
   sao.checked = true;
   openSidebar();
 }
+// toggle dropdown arrows
+let checkArrow = (e) => {
+  if (e.checked) {
+    e.parentElement.querySelector("i").classList.add("bi-chevron-up");
+    e.parentElement.querySelector("i").classList.remove("bi-chevron-down");
+  }
+  if (!e.checked) {
+    e.parentElement.querySelector("i").classList.remove("bi-chevron-up");
+    e.parentElement.querySelector("i").classList.add("bi-chevron-down");
+  }
+};
+let dropdownArrows = document.getElementsByName("checkbox-dropdown-menu");
+dropdownArrows.forEach((e) =>
+  e.addEventListener("change", () => checkArrow(e))
+);
 // dropdowns always open
 let sdo = document.querySelector("#sidebar-dropdown-open");
 sdo.addEventListener("change", () => toggleDropdownsAlwaysOpen());
 toggleDropdownsAlwaysOpen = () => {
   localStorage.setItem("TUS_dropdowns_always_open", sdo.checked);
-  let dropdownIcons = document.querySelectorAll(".sidebar-dropdown-icon i");
-  let dropdowns = document.querySelectorAll("[data-dropdown]");
-  if (localStorage.getItem("TUS_dropdowns_always_open") === "true") {
-    dropdowns.forEach((dd) => dd.classList.add("dropdown-show"));
-    dropdownIcons.forEach((dd) => {
-      dd.classList.add("bi-chevron-up");
-      dd.classList.remove("bi-chevron-down");
-    });
-  } else {
-    dropdowns.forEach((dd) => dd.classList.remove("dropdown-show"));
-    dropdownIcons.forEach((dd) => {
-      dd.classList.remove("bi-chevron-up");
-      dd.classList.add("bi-chevron-down");
-    });
-  }
+  let dropdowns = document.getElementsByName("checkbox-dropdown-menu");
+  dropdowns.forEach((e) => {
+    if (localStorage.getItem("TUS_dropdowns_always_open") === "true")
+      e.checked = true;
+    else e.checked = false;
+    checkArrow(e);
+  });
 };
 if (localStorage.getItem("TUS_dropdowns_always_open") === "true") {
   sdo.checked = true;
