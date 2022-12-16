@@ -248,7 +248,7 @@ footer button {
   overflow: visible;
   position: sticky;
   top: var(--topbar-height);
-  transition: width 0.3s;
+  transition: width 0.5s;
   width: var(--sidebar-width);
   z-index: 1;
 }
@@ -306,7 +306,7 @@ footer button {
   padding: 1rem;
   position: fixed;
   right: -14rem;
-  transition: right 0.3s ease-in;
+  transition: right 0.5s ease-in-out;
   width: var(--settings-width);
   z-index: 1;
 }
