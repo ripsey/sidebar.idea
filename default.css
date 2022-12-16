@@ -440,14 +440,17 @@ footer a:hover {
 }
 
 .sidebar .item label:hover {
-  background-color: rgb(196, 196, 196);
+  background-color: #bdbdbd;
 }
 
 .sidebar .item ul.item-dropdown-menu {
   width: 100%;
   display: none;
   padding: 0;
-  background-color: rgb(189, 189, 189);
+  background-color: #bdbdbd;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .sidebar .item ul.item-dropdown-menu li {
