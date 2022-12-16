@@ -30,14 +30,14 @@ toggleDropdownArrow = (e) => {
     arrow.classList.remove("bi-chevron-down");
   }
 };
-let dropdowns = document.querySelectorAll(".sidebar-dropdown-icon");
-dropdowns.forEach((e) => {
+let allDropdownIcons = document.querySelectorAll(".sidebar-dropdown-icon");
+allDropdownIcons.forEach((e) => {
   e.addEventListener("click", () => {
     toggleDropdownArrow(e);
-    let dropdowns = document.querySelectorAll(
+    let dropdownArrow = document.querySelectorAll(
       "[data-dropdown=" + e.getAttribute("data-dropdown-header") + "]"
     );
-    dropdowns.forEach((e) => e.classList.toggle("dropdown-show"));
+    dropdownArrow.forEach((e) => e.classList.toggle("dropdown-show"));
   });
 });
 // close sidebar on resize
@@ -51,35 +51,22 @@ window.addEventListener("resize", () => {
   }
 });
 // sidebar always open
-document
-  .querySelector("#sidebar-always-open")
-  .addEventListener("change", () => {
-    toggleSidebarAlwaysOpen();
-  });
+let sao = document.querySelector("#sidebar-always-open");
+sao.addEventListener("change", () => toggleSidebarAlwaysOpen());
 toggleSidebarAlwaysOpen = () => {
-  localStorage.setItem(
-    "TUS_sidebar_always_open",
-    document.querySelector("#sidebar-always-open").checked
-  );
+  localStorage.setItem("TUS_sidebar_always_open", sao.checked);
   if (localStorage.getItem("TUS_sidebar_always_open") === "true") openSidebar();
   else closeSidebar();
 };
-let sidebar_always_open = localStorage.getItem("TUS_sidebar_always_open");
-if (sidebar_always_open === "true") {
-  document.querySelector("#sidebar-always-open").checked = true;
+if (localStorage.getItem("TUS_sidebar_always_open") === "true") {
+  sao.checked = true;
   openSidebar();
 }
 // dropdowns always open
-document
-  .querySelector("#sidebar-dropdown-open")
-  .addEventListener("change", () => {
-    toggleDropdownsAlwaysOpen();
-  });
+let sdo = document.querySelector("#sidebar-dropdown-open");
+sdo.addEventListener("change", () => toggleDropdownsAlwaysOpen());
 toggleDropdownsAlwaysOpen = () => {
-  localStorage.setItem(
-    "TUS_dropdowns_always_open",
-    document.querySelector("#sidebar-dropdown-open").checked
-  );
+  localStorage.setItem("TUS_dropdowns_always_open", sdo.checked);
   let dropdownIcons = document.querySelectorAll(".sidebar-dropdown-icon i");
   let dropdowns = document.querySelectorAll("[data-dropdown]");
   if (localStorage.getItem("TUS_dropdowns_always_open") === "true") {
@@ -96,9 +83,8 @@ toggleDropdownsAlwaysOpen = () => {
     });
   }
 };
-let dropdowns_always_open = localStorage.getItem("TUS_dropdowns_always_open");
-if (dropdowns_always_open === "true") {
-  document.querySelector("#sidebar-dropdown-open").checked = true;
+if (localStorage.getItem("TUS_dropdowns_always_open") === "true") {
+  sdo.checked = true;
   toggleDropdownsAlwaysOpen();
 }
 // hide header
@@ -134,6 +120,7 @@ document.querySelector("#sidebar-disco").addEventListener("change", () => {
 toggleDisco = () => {
   sidebar.classList.toggle("disco");
   topbar.classList.toggle("disco-2");
+  topsidebar.classList.toggle("disco-2");
   document
     .querySelectorAll(".sidebar-list-item")
     .forEach((e) => e.classList.toggle("disco-2"));
