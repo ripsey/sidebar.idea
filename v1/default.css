@@ -42,7 +42,7 @@
   --wrapper-background: #f5f5f5;
 }
 
-:root:has(.settingsbar #theme-belgium:checked) {
+body.theme-belgium {
   --accent-color: #b41a1a;
   --accent-color-secondary: #e10074;
   --header-background: #a03333;
@@ -59,7 +59,7 @@
   --footer-color: #000;
 }
 
-:root:has(.settingsbar #theme-christmas:checked) {
+body.theme-christmas {
   --accent-color: #00aeff;
   --accent-color-secondary: #e10074;
   --header-background: #e4b61e;
@@ -76,8 +76,8 @@
   --footer-color: #000;
 }
 
-:root:has(.settingsbar #theme-dark:checked) {
-  --text-color: #fff !important;
+body.theme-dark {
+  color: #fff;
   --accent-color: #e1ff00;
   --accent-color-secondary: #e10074;
   --header-background: #2e2e2e;
@@ -93,10 +93,6 @@
   --footer-background: #e1ff00;
   --footer-color: #000;
   --wrapper-background: #1e1e1e;
-}
-
-body {
-  color: var(--text-color, currentColor);
 }
 
 @keyframes color {

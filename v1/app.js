@@ -46,7 +46,7 @@ window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
     if (
       sidebar.classList.contains("open") &&
-      localStorage.getItem("TUS_sidebar_always_open") !== "true"
+      localStorage.getItem("sidebar_always_open") !== "true"
     )
       closeSidebar();
   }
@@ -59,13 +59,13 @@ document
   });
 toggleSidebarAlwaysOpen = () => {
   localStorage.setItem(
-    "TUS_sidebar_always_open",
+    "sidebar_always_open",
     document.querySelector("#sidebar-always-open").checked
   );
-  if (localStorage.getItem("TUS_sidebar_always_open") === "true") openSidebar();
+  if (localStorage.getItem("sidebar_always_open") === "true") openSidebar();
   else closeSidebar();
 };
-let sidebar_always_open = localStorage.getItem("TUS_sidebar_always_open");
+let sidebar_always_open = localStorage.getItem("sidebar_always_open");
 if (sidebar_always_open === "true") {
   document.querySelector("#sidebar-always-open").checked = true;
   // mobilemenu.classList.add("is-active");
@@ -79,12 +79,12 @@ document
   });
 toggleDropdownsAlwaysOpen = () => {
   localStorage.setItem(
-    "TUS_dropdowns_always_open",
+    "dropdowns_always_open",
     document.querySelector("#sidebar-dropdown-open").checked
   );
   let dropdownIcons = document.querySelectorAll(".sidebar-dropdown-icon i");
   let dropdowns = document.querySelectorAll("[data-dropdown]");
-  if (localStorage.getItem("TUS_dropdowns_always_open") === "true") {
+  if (localStorage.getItem("dropdowns_always_open") === "true") {
     dropdowns.forEach((e) => e.classList.add("dropdown-show"));
     dropdownIcons.forEach((e) => {
       e.classList.add("bi-chevron-up");
@@ -98,7 +98,7 @@ toggleDropdownsAlwaysOpen = () => {
     });
   }
 };
-let dropdowns_always_open = localStorage.getItem("TUS_dropdowns_always_open");
+let dropdowns_always_open = localStorage.getItem("dropdowns_always_open");
 if (dropdowns_always_open === "true") {
   document.querySelector("#sidebar-dropdown-open").checked = true;
   toggleDropdownsAlwaysOpen();
@@ -109,26 +109,32 @@ document
   .addEventListener("change", () => toggleHeader());
 toggleHeader = () => {
   localStorage.setItem(
-    "TUS_hide_header",
+    "hide_header",
     document.querySelector("#sidebar-hide-header").checked
   );
-  let hide_header = localStorage.getItem("TUS_hide_header");
+  let hide_header = localStorage.getItem("hide_header");
   if (hide_header === "true") topsidebar.classList.add("d-none");
   else topsidebar.classList.remove("d-none");
 };
-if (localStorage.getItem("TUS_hide_header") === "true") {
+if (localStorage.getItem("hide_header") === "true") {
   document.querySelector("#sidebar-hide-header").checked = true;
   toggleHeader();
 }
 // theme switcher
-let theme = localStorage.getItem("TUS_theme");
-if (theme) document.querySelector("#theme-" + theme).checked = true;
-let radios = document.getElementsByName("theme-switch");
-radios.forEach((radio) =>
-  radio.addEventListener("change", () => {
-    localStorage.setItem("TUS_theme", radio.value);
-  })
-);
+toggleTheme = (theme) => {
+  document.body.className = "";
+  document.body.classList.toggle("theme-" + theme);
+  localStorage.setItem("brandname_theme", theme);
+};
+let radios = document.querySelectorAll(".form-check-theme-switch");
+document.querySelector("#theme-switch-default").checked = true;
+radios.forEach((e) => e.addEventListener("change", () => toggleTheme(e.value)));
+radios.forEach((e) => {
+  if (e.value === localStorage.getItem("brandname_theme")) {
+    e.checked = true;
+    toggleTheme(e.value);
+  }
+});
 // disco
 document.querySelector("#sidebar-disco").addEventListener("change", () => {
   toggleDisco();
