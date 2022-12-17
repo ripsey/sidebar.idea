@@ -340,6 +340,9 @@ footer a:hover {
 .sidebar .item .icon-link-label {
   display: flex;
 }
+.sidebar .item {
+  transition: 0.4s all;
+}
 .sidebar .item a {
   align-items: center;
   color: var(--lightest-gray);
