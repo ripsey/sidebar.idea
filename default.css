@@ -35,7 +35,7 @@
   --sidebar-icon-color: #b94191;
   --sidebar-top-background: #233981;
   --sidebar-top-color: #fff;
-  --sidebar-width: 3.8rem;
+  --sidebar-width: 3rem;
   --sidebar-width-open: 15rem;
   --topbar-background: #e8e8e8;
   --topbar-height: 2.5rem;
@@ -203,7 +203,7 @@ footer button {
   border: none;
   cursor: pointer;
   outline: none;
-  padding-inline: 0.4rem;
+  padding-inline: 0.25rem;
   user-select: none;
   z-index: 100;
 }
