@@ -467,7 +467,9 @@
             </div>
 
             <div class="table-responsive">
-              <table class="table table-bordered table-hover table-striped">
+              <table
+                class="table table-bordered table-hover table-striped table-sm"
+              >
                 <thead class="table-dark">
                   <tr>
                     <th scope="col">#</th>
@@ -501,7 +503,7 @@
             <div class="row">
               <div class="col-md-7">
                 <div class="card mb-3">
-                  <div class="card-header">Header text</div>
+                  <div class="card-header fw-bold">Header text</div>
                   <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">
@@ -564,7 +566,7 @@
                   <div
                     class="card-header d-flex justify-content-between align-items-center"
                   >
-                    <span>Header text</span>
+                    <span class="fw-bold">Header text</span>
                     <div>
                       <a
                         href="#"
@@ -593,7 +595,9 @@
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
                         </p>
-                        <a href="#" class="btn btn-sm btn-outline-danger w-100"
+                        <a
+                          href="#"
+                          class="btn btn-sm btn-outline-danger w-100 mb-2"
                           >Go somewhere</a
                         >
                       </div>
@@ -603,7 +607,9 @@
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
                         </p>
-                        <a href="#" class="btn btn-sm btn-outline-success w-100"
+                        <a
+                          href="#"
+                          class="btn btn-sm btn-outline-success w-100 mb-2"
                           >Go somewhere</a
                         >
                       </div>
@@ -613,7 +619,9 @@
                           Some quick example text to build on the card title and
                           make up the bulk of the card's content.
                         </p>
-                        <a href="#" class="btn btn-sm btn-outline-warning w-100"
+                        <a
+                          href="#"
+                          class="btn btn-sm btn-outline-warning w-100 mb-2"
                           >Go somewhere</a
                         >
                       </div>
@@ -623,7 +631,6 @@
                 </div>
               </div>
             </div>
-            <h3>Progressbars</h3>
             <div class="progress mb-2">
               <div
                 class="progress-bar"
@@ -681,6 +688,45 @@
               >
                 100%
               </div>
+            </div>
+            <div class="card card-body mt-3">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Check me out</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
             </div>
           </main>
           <footer>
