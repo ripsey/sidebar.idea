@@ -98,7 +98,27 @@
                 </a>
                 <ul class="item-dropdown-closed-menu">
                   <li>
-                    <a href="dashboard123.html">Dashboard</a>
+                    <a href="dashboard.html">Dashboard</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <a href="customers.html" class="item-link">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="item-icon bi bi-person-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                    />
+                  </svg>
+                  <div class="item-title">Customers</div>
+                </a>
+                <ul class="item-dropdown-closed-menu">
+                  <li>
+                    <a href="customers.html">Customers</a>
                   </li>
                 </ul>
               </li>
@@ -140,6 +160,50 @@
                 </ul>
               </li>
               <li class="item">
+                <div class="icon-link-label">
+                  <a href="services-all.html" class="item-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="item-icon bi bi-database-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223Z"
+                      />
+                      <path
+                        d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"
+                      />
+                      <path
+                        d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"
+                      />
+                      <path
+                        d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"
+                      />
+                    </svg>
+                    <div class="item-title">Services</div>
+                  </a>
+                  <label for="services-dropdown" name="label-dropdown-menu">
+                    <i class="bi bi-chevron-down"></i>
+                  </label>
+                </div>
+                <input
+                  type="checkbox"
+                  name="checkbox-dropdown-menu"
+                  class="item-dropdown-check"
+                  id="services-dropdown"
+                />
+                <ul class="item-dropdown-menu">
+                  <li><a href="service-01.html">Service one</a></li>
+                  <li><a href="service-02.html">Service two</a></li>
+                </ul>
+                <ul class="item-dropdown-closed-menu">
+                  <li><a href="products.html">Services</a></li>
+                  <li><a href="service-01.html">Service one</a></li>
+                  <li><a href="service-02.html">Service two</a></li>
+                </ul>
+              </li>
+              <li class="item">
                 <a href="v1/index.html" class="item-link">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -165,11 +229,11 @@
                       d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49Z"
                     ></path>
                   </svg>
-                  <div class="item-title">Stable release</div>
+                  <div class="item-title">First release</div>
                 </a>
                 <ul class="item-dropdown-closed-menu">
                   <li>
-                    <a href="v1/index.html">Stable release</a>
+                    <a href="v1/index.html">First release</a>
                   </li>
                 </ul>
               </li>
@@ -207,7 +271,9 @@
           </header>
           <main>
             <h2>To do list</h2>
-            <ol></ol>
+            <ol>
+              <li>Optimize</li>
+            </ol>
 
             <h2>Done</h2>
             <ol>

@@ -105,15 +105,12 @@ document.querySelector("#sidebar-disco").addEventListener("change", () => {
   toggleDisco();
 });
 toggleDisco = () => {
-  sidebar.classList.toggle("disco");
-  topbar.classList.toggle("disco-2");
+  sidebar.classList.toggle("disco-2");
+  topbar.classList.toggle("disco");
   topsidebar.classList.toggle("disco-2");
   document
-    .querySelectorAll(".sidebar-list-item")
-    .forEach((e) => e.classList.toggle("disco-2"));
-  document
-    .querySelectorAll(".sidebar-dropdown-header")
-    .forEach((e) => e.classList.toggle("disco-2"));
+    .querySelectorAll(".item")
+    .forEach((e) => e.classList.toggle("disco"));
   settingsbar.classList.toggle("disco");
 };
 // load transitions 500ms after page load
