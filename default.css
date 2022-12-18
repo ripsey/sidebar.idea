@@ -26,11 +26,11 @@
   --sidebar-item-color: #f4f4f4;
   --sidebar-icon: 1.8rem;
   --sidebar-width: 3rem;
-  --sidebar-width-open: 23rem;
+  --sidebar-width-open: 15rem;
   --settings-background: #4338ca;
   --settings-background-hover: #7681b8;
   --settings-width: 14rem;
-  --wrapper-background: #f5f5f5;
+  --wrapper-background: #fff;
   --header-background: #30af7a;
   --header-background-gradient: #afff19;
   --header-color: #fff;
@@ -287,6 +287,7 @@ footer button {
 }
 .sidebar.open {
   width: var(--sidebar-width-open);
+  /* width: 100%; */
 }
 .sidebar.open .item-dropdown-closed-menu {
   pointer-events: none;
