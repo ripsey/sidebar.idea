@@ -10,37 +10,34 @@
 :root {
   --accent-color: #afff19;
   --accent-color-secondary: #ca3876;
-  --animation-duration: 0s;
-  --animation-timing-curve: ease-in-out;
   --brand-icon: 4.5rem;
   --brandname-color: #fff;
   --dark-gray: #0d0d0d;
-  --footer-background: #afff19;
-  --footer-color: #000;
-  --header-background: #30af7a;
-  --header-background-gradient: #afff19;
-  --header-color: #fff;
   --light-gray: #e8e8e8;
   --lightest-gray: #f4f4f4;
   --medium-gray: #606060;
-  --settings-background: #4338ca;
-  --settings-background-hover: #7681b8;
-  --settings-width: 14rem;
+  --topbar-background: #fff;
+  --topbar-height: 2.5rem;
   --sidebar-top-color: #fff;
   --sidebar-top-background: #4338ca;
   --sidebar-background: #4338ca;
   --sidebar-dropdown-background: #f5f5f5;
-  --sidebar-icon: 1.8rem;
-  --sidebar-icon-color: #b94191;
-  --sidebar-width: 3rem;
-  --sidebar-width-open: 23rem;
-  --topbar-background: #e8e8e8;
-  --topbar-height: 2.5rem;
-  --wrapper-background: #f5f5f5;
-  --selection-background-color: #e1ff00;
-  --selection-color: #000;
   --sidebar-svg-color: #fff;
   --sidebar-item-color: #f4f4f4;
+  --sidebar-icon: 1.8rem;
+  --sidebar-width: 3rem;
+  --sidebar-width-open: 23rem;
+  --settings-background: #4338ca;
+  --settings-background-hover: #7681b8;
+  --settings-width: 14rem;
+  --wrapper-background: #f5f5f5;
+  --header-background: #30af7a;
+  --header-background-gradient: #afff19;
+  --header-color: #fff;
+  --footer-background: #afff19;
+  --footer-color: #000;
+  --selection-background-color: #e1ff00;
+  --selection-color: #000;
 }
 :root:has(.settingsbar #theme-belgium:checked) {
   --accent-color: #b41a1a;
@@ -53,7 +50,7 @@
   --settings-background: #851616;
   --sidebar-background: #2e2e29;
   --sidebar-background-gradient: #838383;
-  --sidebar-dropdown-background: #9c4b4b;
+  --sidebar-dropdown-background: #965a5a;
   --sidebar-top-background: #2e2e29;
   --sidebar-top-color: #fff;
   --topbar-background: #ccc916;
@@ -66,10 +63,10 @@
   --header-background: #e4b61e;
   --header-background-gradient: #b9ad00;
   --header-color: #fff;
-  --settings-background: #332323;
+  --settings-background: #399b62;
   --sidebar-background: #832323;
   --sidebar-background-gradient: #6b1a1a;
-  --sidebar-dropdown-background: #8f2929;
+  --sidebar-dropdown-background: #e4b61e;
   --sidebar-top-background: #832323;
   --sidebar-top-color: #fff;
   --topbar-background: #2e5f29;
@@ -87,7 +84,7 @@
   --sidebar-dropdown-background: #b8b8b8;
   --sidebar-top-background: #2e2e2e;
   --sidebar-top-color: #fff;
-  --text-color: #fff !important;
+  --text-color: #fff;
   --topbar-background: #fff;
   --wrapper-background: #1e1e1e;
 }
@@ -99,26 +96,21 @@
   --header-background: #4338ca;
   --header-background-gradient: #000;
   --header-color: #fff;
-  --settings-background: #332323;
-  --sidebar-background: #ffffff;
-  --sidebar-dropdown-background: #b8b8b8;
-  --sidebar-top-background: #ffffff;
+  --settings-background: #888888;
+  --sidebar-background: #fff;
+  --sidebar-dropdown-background: #d8d8d8;
+  --sidebar-top-background: #fff;
   --sidebar-top-color: #fff;
-  --text-color: #000000 !important;
+  --text-color: #000;
   --topbar-background: #fff;
-  --sidebar-svg-color: rgb(0, 0, 0);
-  --sidebar-item-color: #000000;
-  --brandname-color: rgb(0, 0, 0);
-  /* --wrapper-background: #1e1e1e; */
+  --sidebar-svg-color: #000;
+  --sidebar-item-color: #000;
+  --brandname-color: #000;
+  --wrapper-background: #fff;
 }
 body {
   /* color: var(--text-color, currentColor); */
   font-family: "Ubuntu", sans-serif;
-}
-table,
-th,
-td {
-  color: var(--text-color, currentColor);
 }
 ::-moz-selection {
   color: var(--selection-color);
@@ -169,7 +161,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--text-color, currentColor);
   font-weight: 700;
 }
 .preload-transitions * {
