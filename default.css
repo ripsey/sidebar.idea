@@ -27,8 +27,8 @@
   --sidebar-icon: 1.8rem;
   --sidebar-width: 3rem;
   --sidebar-width-open: 15rem;
-  --settings-background: #4338ca;
-  --settings-background-hover: #7681b8;
+  --settings-background: #ffffff;
+  --settings-color: #000;
   --settings-width: 14rem;
   --wrapper-background: #fff;
   --header-background: #30af7a;
@@ -47,7 +47,6 @@
   --header-background: #a03333;
   --header-background-gradient: #610d11;
   --header-color: #fff;
-  --settings-background: #851616;
   --sidebar-background: #2e2e29;
   --sidebar-background-gradient: #838383;
   --sidebar-dropdown-background: #965a5a;
@@ -63,7 +62,6 @@
   --header-background: #e4b61e;
   --header-background-gradient: #b9ad00;
   --header-color: #fff;
-  --settings-background: #399b62;
   --sidebar-background: #832323;
   --sidebar-background-gradient: #6b1a1a;
   --sidebar-dropdown-background: #e4b61e;
@@ -79,7 +77,6 @@
   --header-background: #2e2e2e;
   --header-background-gradient: #000;
   --header-color: #fff;
-  --settings-background: #332323;
   --sidebar-background: #2e2e2e;
   --sidebar-dropdown-background: #b8b8b8;
   --sidebar-top-background: #2e2e2e;
@@ -96,7 +93,6 @@
   --header-background: #4338ca;
   --header-background-gradient: #000;
   --header-color: #fff;
-  --settings-background: #888888;
   --sidebar-background: #fff;
   --sidebar-dropdown-background: #d8d8d8;
   --sidebar-top-background: #fff;
@@ -324,7 +320,7 @@ footer button {
 }
 .settingsbar {
   background-color: var(--settings-background);
-  color: var(--lightest-gray);
+  color: var(--settings-color);
   height: 100vh;
   overflow-y: auto;
   padding: 1rem;
@@ -353,19 +349,11 @@ footer button {
   width: 20px;
 }
 .profile-settings-btn {
-  align-items: center;
-  background-color: var(--settings-background);
-  border: 0;
-  border-radius: 0.25rem;
-  color: var(--lightest-gray);
   display: flex;
+  align-items: center;
   gap: 0.5rem;
-  justify-content: center;
   padding-inline: 0.5rem;
-}
-.profile-settings-btn:hover {
-  background-color: var(--settings-background-hover);
-  color: var(--lightest-gray);
+  color: var(--dark-gray);
 }
 .disco {
   animation: color 9s infinite alternate-reverse;
