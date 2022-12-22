@@ -353,7 +353,6 @@ footer button {
   align-items: center;
   gap: 0.5rem;
   padding-inline: 0.5rem;
-  color: var(--dark-gray);
 }
 .disco {
   animation: color 9s infinite alternate-reverse;
@@ -494,4 +493,76 @@ input[type="checkbox"]:checked ~ .item-dropdown-menu {
 .sidebar .item:hover svg,
 .sidebar .item.is-active svg {
   fill: var(--accent-color-secondary);
+}
+
+.statistics {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.statistics .stat {
+  /* display: flex; */
+  /* flex-direction: column; */
+  color: #fff;
+  padding: 1rem;
+  flex-grow: 1;
+  border-radius: 0.5rem;
+  transition: background 0.4s ease-in-out;
+}
+
+.statistics .stat .stat-wrapper i {
+  font-size: 4rem;
+  /* align-items: center; */
+}
+
+.statistics .stat .stat-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.statistics .stat .stat-wrapper .info {
+  flex-grow: 1;
+}
+
+.statistics .stat .stat-wrapper .info .info-header {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.statistics .stat .stat-wrapper .info .info-value {
+  font-size: 3rem;
+  line-height: 3rem;
+  /* margin-left: 1rem; */
+}
+.statistics .stat .stat-wrapper .info p {
+  margin-bottom: 0;
+}
+.statistics .stat-blue {
+  background-color: #00aeff;
+}
+.statistics .stat-blue:hover {
+  background-color: #026694;
+}
+.statistics .stat-green {
+  background-color: #38c44f;
+}
+.statistics .stat-green:hover {
+  background-color: #227430;
+}
+.statistics .stat-red {
+  background-color: #b12727;
+}
+.statistics .stat-red:hover {
+  background-color: #741c1c;
+}
+
+.statistics .stat-pink {
+  background-color: #c01959;
+}
+.statistics .stat-pink:hover {
+  background-color: #7e123b;
 }
