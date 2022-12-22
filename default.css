@@ -500,6 +500,7 @@ input[type="checkbox"]:checked ~ .item-dropdown-menu {
   gap: 1rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+  cursor: default;
 }
 
 .statistics .stat {
@@ -508,7 +509,7 @@ input[type="checkbox"]:checked ~ .item-dropdown-menu {
   color: #fff;
   padding: 1rem;
   flex-grow: 1;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   transition: background 0.4s ease-in-out;
 }
 
