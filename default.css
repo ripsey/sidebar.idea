@@ -280,13 +280,14 @@ footer button {
   background-color: var(--sidebar-background);
   /* overflow: visible; */
   top: var(--topbar-height);
-  transition-duration: 500ms;
+  /* transition-duration: 500ms;
   transition-property: width;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
   z-index: 1;
 }
 .sidebar.open {
   width: var(--sidebar-width-open);
+  min-width: var(--sidebar-width-open);
   /* width: 100%; */
 }
 .sidebar.open .item-dropdown-closed-menu {
